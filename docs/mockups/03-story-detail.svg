@@ -1,0 +1,276 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 2800" width="1440" height="2800">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .bg-light { fill: #f9fafb; }
+      .card { fill: #ffffff; stroke: #e5e7eb; stroke-width: 1; }
+      .primary { fill: #2563eb; }
+      .primary-light { fill: #dbeafe; }
+      .primary-bg { fill: #eff6ff; }
+      .text-dark { fill: #111827; font-family: system-ui, sans-serif; }
+      .text-medium { fill: #374151; font-family: system-ui, sans-serif; }
+      .text-light { fill: #6b7280; font-family: system-ui, sans-serif; }
+      .text-white { fill: #ffffff; font-family: system-ui, sans-serif; }
+      .border { stroke: #e5e7eb; stroke-width: 1; fill: none; }
+      .legal-tag { fill: #fef3c7; }
+      .legal-text { fill: #92400e; }
+      .shadow { filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)); }
+      .chat-bubble { fill: #f3f4f6; }
+      .chat-ai { fill: #dbeafe; }
+      .success-badge { fill: #d1fae5; }
+      .success-text { fill: #065f46; }
+      .annotation { fill: #dc2626; font-family: system-ui, sans-serif; font-style: italic; }
+      .annotation-box { fill: #fef2f2; stroke: #dc2626; stroke-width: 1; stroke-dasharray: 4; }
+      .quote { fill: #f3f4f6; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="1440" height="2800"/>
+
+  <!-- ========== HEADER/NAV ========== -->
+  <rect class="card" x="0" y="0" width="1440" height="72"/>
+  <text x="80" y="44" class="text-dark" font-size="24" font-weight="bold">AI Saved Me</text>
+  <text x="700" y="44" class="text-medium" font-size="16">Stories</text>
+  <text x="800" y="44" class="text-medium" font-size="16">Categories</text>
+  <text x="920" y="44" class="text-medium" font-size="16">How It Works</text>
+  <rect class="card" x="1100" y="20" width="100" height="36" rx="6"/>
+  <text x="1125" y="44" class="text-medium" font-size="14">Sign In</text>
+  <rect class="primary" x="1220" y="20" width="140" height="36" rx="6"/>
+  <text x="1245" y="44" class="text-white" font-size="14" font-weight="500">Share Your Win</text>
+
+  <!-- ========== HERO IMAGE ========== -->
+  <rect fill="#1e293b" x="0" y="72" width="1440" height="400"/>
+  <text x="720" y="280" fill="#94a3b8" font-size="18" text-anchor="middle" font-family="system-ui, sans-serif">Story Hero Image - Full Width</text>
+
+  <!-- Breadcrumb overlay -->
+  <text x="80" y="110" fill="#94a3b8" font-size="14" font-family="system-ui, sans-serif">Stories › Legal Wins › Enterprise Dispute</text>
+
+  <!-- ========== ARTICLE HEADER ========== -->
+  <g transform="translate(280, 520)">
+    <!-- Category Tag -->
+    <rect class="legal-tag" x="0" y="0" width="100" height="32" rx="16"/>
+    <text x="25" y="21" class="legal-text" font-size="13" font-weight="600">Legal Win</text>
+
+    <!-- Title -->
+    <text x="0" y="70" class="text-dark" font-size="42" font-weight="bold">How I Beat Enterprise's $3,200</text>
+    <text x="0" y="120" class="text-dark" font-size="42" font-weight="bold">Damage Claim Using Claude</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="170" class="text-light" font-size="20">A systematic approach to fighting wrongful charges with AI-assisted legal research</text>
+
+    <!-- Author Info -->
+    <g transform="translate(0, 210)">
+      <circle fill="#e5e7eb" cx="28" cy="28" r="28"/>
+      <text x="70" y="20" class="text-dark" font-size="16" font-weight="600">Ankush Dixit</text>
+      <text x="70" y="42" class="text-light" font-size="14">December 2024 · 5 min read</text>
+    </g>
+
+    <!-- Success Badge -->
+    <g transform="translate(680, 210)">
+      <rect class="success-badge" width="180" height="56" rx="8"/>
+      <text x="20" y="25" class="success-text" font-size="12" font-weight="600">OUTCOME</text>
+      <text x="20" y="45" class="success-text" font-size="18" font-weight="bold">$3,200 Saved</text>
+    </g>
+
+    <!-- Engagement Bar -->
+    <g transform="translate(0, 290)">
+      <rect class="card" width="880" height="60" rx="8"/>
+
+      <!-- Like -->
+      <g transform="translate(30, 18)">
+        <circle fill="#f3f4f6" cx="12" cy="12" r="12"/>
+        <text x="32" y="17" class="text-medium" font-size="14">234 likes</text>
+      </g>
+
+      <!-- Comment -->
+      <g transform="translate(160, 18)">
+        <circle fill="#f3f4f6" cx="12" cy="12" r="12"/>
+        <text x="32" y="17" class="text-medium" font-size="14">45 comments</text>
+      </g>
+
+      <!-- Bookmark -->
+      <g transform="translate(310, 18)">
+        <circle fill="#f3f4f6" cx="12" cy="12" r="12"/>
+        <text x="32" y="17" class="text-medium" font-size="14">Bookmark</text>
+      </g>
+
+      <!-- Share -->
+      <g transform="translate(440, 18)">
+        <circle fill="#f3f4f6" cx="12" cy="12" r="12"/>
+        <text x="32" y="17" class="text-medium" font-size="14">Share</text>
+      </g>
+
+      <!-- Make It Your Own Button -->
+      <rect class="primary" x="620" y="10" width="240" height="40" rx="6"/>
+      <text x="670" y="36" class="text-white" font-size="14" font-weight="600">Make It Your Own →</text>
+    </g>
+  </g>
+
+  <!-- ========== ARTICLE CONTENT ========== -->
+  <g transform="translate(280, 900)">
+    <!-- Intro Paragraph -->
+    <text x="0" y="0" class="text-medium" font-size="18" font-weight="400">
+      <tspan x="0" dy="0">It started with a $3,200 bill from Enterprise for "damage" to a rental van that I knew</tspan>
+      <tspan x="0" dy="30">I hadn't caused. After the initial shock, I decided to fight back—but not with expensive</tspan>
+      <tspan x="0" dy="30">lawyers. Instead, I turned to Claude for help.</tspan>
+    </text>
+
+    <!-- Section: The Problem -->
+    <text x="0" y="140" class="text-dark" font-size="28" font-weight="bold">The Problem</text>
+    <text x="0" y="180" class="text-medium" font-size="18">
+      <tspan x="0" dy="0">Three weeks after returning a rental van, I received a damage claim letter from</tspan>
+      <tspan x="0" dy="30">Enterprise. They claimed I had caused roof damage worth $3,200. The problem?</tspan>
+      <tspan x="0" dy="30">I had done a walk-around inspection at return, and no damage was noted.</tspan>
+    </text>
+  </g>
+
+  <!-- ========== EMBEDDED IMAGE ========== -->
+  <g transform="translate(280, 1180)" class="shadow">
+    <rect fill="#e5e7eb" width="880" height="300" rx="12"/>
+    <text x="440" y="150" class="text-light" font-size="16" text-anchor="middle">Evidence Photo: Rental Agreement Showing Clean Return</text>
+    <text x="440" y="280" class="text-light" font-size="12" text-anchor="middle">Photo caption explaining what this evidence shows</text>
+  </g>
+
+  <!-- ========== CONTINUE ARTICLE ========== -->
+  <g transform="translate(280, 1520)">
+    <!-- Section: The AI Strategy -->
+    <text x="0" y="0" class="text-dark" font-size="28" font-weight="bold">The AI Strategy</text>
+    <text x="0" y="40" class="text-medium" font-size="18">
+      <tspan x="0" dy="0">I started by uploading all my documentation to Claude: the rental agreement, the</tspan>
+      <tspan x="0" dy="30">damage claim letter, photos I had taken, and the return receipt.</tspan>
+    </text>
+
+    <!-- Quote Block -->
+    <g transform="translate(0, 120)">
+      <rect class="quote" width="880" height="120" rx="8"/>
+      <rect class="primary" x="0" y="0" width="4" height="120" rx="2"/>
+      <text x="30" y="40" class="text-dark" font-size="18" font-style="italic">
+        <tspan x="30" dy="0">"I asked Claude to analyze my evidence and identify any legal</tspan>
+        <tspan x="30" dy="28">weaknesses in Enterprise's claim. The response was eye-opening."</tspan>
+      </text>
+      <text x="30" y="100" class="text-light" font-size="14">— The moment I realized AI could help</text>
+    </g>
+  </g>
+
+  <!-- ========== CHAT SESSION EMBED ========== -->
+  <g transform="translate(280, 1720)">
+    <text x="0" y="0" class="text-dark" font-size="22" font-weight="bold">Actual AI Chat Session</text>
+    <text x="0" y="30" class="text-light" font-size="14">Verified conversation with Claude</text>
+
+    <g transform="translate(0, 60)" class="shadow">
+      <rect class="card" width="880" height="440" rx="12"/>
+
+      <!-- Chat Header -->
+      <rect fill="#f9fafb" x="0" y="0" width="880" height="50" rx="12 12 0 0"/>
+      <circle fill="#2563eb" cx="30" cy="25" r="12"/>
+      <text x="50" y="30" class="text-dark" font-size="14" font-weight="600">Claude</text>
+      <text x="800" y="30" class="text-light" font-size="12">View Full Chat →</text>
+
+      <!-- User Message -->
+      <g transform="translate(440, 70)">
+        <rect class="chat-bubble" x="0" y="0" width="420" height="80" rx="12"/>
+        <text x="15" y="25" class="text-dark" font-size="14">
+          <tspan x="15" dy="0">I received a damage claim for $3,200 from</tspan>
+          <tspan x="15" dy="22">Enterprise. I have photos from return showing no</tspan>
+          <tspan x="15" dy="22">damage. What are my options?</tspan>
+        </text>
+      </g>
+
+      <!-- AI Response -->
+      <g transform="translate(20, 170)">
+        <rect class="chat-ai" x="0" y="0" width="500" height="160" rx="12"/>
+        <text x="15" y="25" class="text-dark" font-size="14">
+          <tspan x="15" dy="0">Based on your documentation, you have several</tspan>
+          <tspan x="15" dy="22">strong defenses:</tspan>
+          <tspan x="15" dy="35">1. Burden of proof is on Enterprise</tspan>
+          <tspan x="15" dy="22">2. Your photos establish baseline condition</tspan>
+          <tspan x="15" dy="22">3. Return inspection record shows no damage</tspan>
+          <tspan x="15" dy="22">4. Timeline questions (3 weeks delay)</tspan>
+        </text>
+      </g>
+
+      <!-- User Follow-up -->
+      <g transform="translate(440, 350)">
+        <rect class="chat-bubble" x="0" y="0" width="420" height="60" rx="12"/>
+        <text x="15" y="25" class="text-dark" font-size="14">
+          <tspan x="15" dy="0">How should I structure my response letter?</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ========== CONTINUE ARTICLE ========== -->
+  <g transform="translate(280, 2280)">
+    <!-- Section: The Result -->
+    <text x="0" y="0" class="text-dark" font-size="28" font-weight="bold">The Result</text>
+    <text x="0" y="40" class="text-medium" font-size="18">
+      <tspan x="0" dy="0">After sending my Claude-assisted response letter citing the specific legal points and</tspan>
+      <tspan x="0" dy="30">attaching my evidence, Enterprise dropped the claim entirely within one week.</tspan>
+    </text>
+
+    <!-- Key Takeaways Box -->
+    <g transform="translate(0, 120)">
+      <rect class="primary-bg" width="880" height="180" rx="12"/>
+      <text x="30" y="35" class="primary" font-size="18" font-weight="bold">Key Takeaways</text>
+      <text x="30" y="70" class="text-dark" font-size="16">
+        <tspan x="30" dy="0">• Always document your rental returns with photos</tspan>
+        <tspan x="30" dy="28">• AI can help identify legal weaknesses in corporate claims</tspan>
+        <tspan x="30" dy="28">• A well-structured response can save thousands</tspan>
+        <tspan x="30" dy="28">• You don't need a lawyer for every dispute</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- ========== RELATED STORIES ========== -->
+  <rect class="bg-light" x="0" y="2540" width="1440" height="260"/>
+  <text x="280" y="2590" class="text-dark" font-size="24" font-weight="bold">Related Stories</text>
+
+  <g transform="translate(280, 2620)" class="shadow">
+    <rect class="card" width="270" height="120" rx="8"/>
+    <rect fill="#e5e7eb" x="0" y="0" width="80" height="120" rx="8 0 0 8"/>
+    <text x="95" y="35" class="text-dark" font-size="14" font-weight="600">Tenant Rights Victory</text>
+    <text x="95" y="55" class="text-light" font-size="12">Got $2,400 deposit back</text>
+    <text x="95" y="100" class="text-light" font-size="11">Sarah M. · Legal</text>
+  </g>
+
+  <g transform="translate(580, 2620)" class="shadow">
+    <rect class="card" width="270" height="120" rx="8"/>
+    <rect fill="#e5e7eb" x="0" y="0" width="80" height="120" rx="8 0 0 8"/>
+    <text x="95" y="35" class="text-dark" font-size="14" font-weight="600">Insurance Appeal Won</text>
+    <text x="95" y="55" class="text-light" font-size="12">$12,000 claim approved</text>
+    <text x="95" y="100" class="text-light" font-size="11">Lisa K. · Legal</text>
+  </g>
+
+  <g transform="translate(880, 2620)" class="shadow">
+    <rect class="card" width="270" height="120" rx="8"/>
+    <rect fill="#e5e7eb" x="0" y="0" width="80" height="120" rx="8 0 0 8"/>
+    <text x="95" y="35" class="text-dark" font-size="14" font-weight="600">Small Claims Success</text>
+    <text x="95" y="55" class="text-light" font-size="12">Contractor paid $5,500</text>
+    <text x="95" y="100" class="text-light" font-size="11">Mike R. · Legal</text>
+  </g>
+
+  <!-- ========== ANNOTATIONS ========== -->
+  <rect class="annotation-box" x="1180" y="520" width="200" height="100" rx="4"/>
+  <text x="1190" y="545" class="annotation" font-size="11">Story header:</text>
+  <text x="1190" y="560" class="annotation" font-size="11">- Category tag</text>
+  <text x="1190" y="575" class="annotation" font-size="11">- Large title</text>
+  <text x="1190" y="590" class="annotation" font-size="11">- Author + date</text>
+  <text x="1190" y="605" class="annotation" font-size="11">- Outcome badge</text>
+
+  <rect class="annotation-box" x="1180" y="800" width="200" height="70" rx="4"/>
+  <text x="1190" y="825" class="annotation" font-size="11">Engagement bar:</text>
+  <text x="1190" y="840" class="annotation" font-size="11">Like, comment, bookmark</text>
+  <text x="1190" y="855" class="annotation" font-size="11">"Make It Your Own" CTA</text>
+
+  <rect class="annotation-box" x="1180" y="1720" width="200" height="80" rx="4"/>
+  <text x="1190" y="1745" class="annotation" font-size="11">Chat session embed:</text>
+  <text x="1190" y="1760" class="annotation" font-size="11">- Shows actual AI convo</text>
+  <text x="1190" y="1775" class="annotation" font-size="11">- Verified badge</text>
+  <text x="1190" y="1790" class="annotation" font-size="11">- Link to full chat</text>
+
+  <rect class="annotation-box" x="20" y="1180" width="200" height="60" rx="4"/>
+  <text x="30" y="1205" class="annotation" font-size="11">Inline images appear</text>
+  <text x="30" y="1220" class="annotation" font-size="11">at relevant points in</text>
+  <text x="30" y="1235" class="annotation" font-size="11">the narrative</text>
+</svg>

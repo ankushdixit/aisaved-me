@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1100" width="1440" height="1100">
+  <defs>
+    <style>
+      .bg { fill: #f9fafb; }
+      .card { fill: #ffffff; stroke: #e5e7eb; stroke-width: 1; }
+      .primary { fill: #2563eb; }
+      .primary-light { fill: #dbeafe; }
+      .primary-bg { fill: #eff6ff; }
+      .success { fill: #059669; }
+      .success-light { fill: #d1fae5; }
+      .text-dark { fill: #111827; font-family: system-ui, sans-serif; }
+      .text-medium { fill: #374151; font-family: system-ui, sans-serif; }
+      .text-light { fill: #6b7280; font-family: system-ui, sans-serif; }
+      .text-white { fill: #ffffff; font-family: system-ui, sans-serif; }
+      .input { fill: #ffffff; stroke: #d1d5db; stroke-width: 1; }
+      .input-filled { fill: #fffbeb; stroke: #f59e0b; stroke-width: 2; }
+      .shadow { filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)); }
+      .code-bg { fill: #1e293b; }
+      .code-text { fill: #e2e8f0; font-family: monospace; }
+      .code-var { fill: #fbbf24; font-family: monospace; }
+      .annotation { fill: #dc2626; font-family: system-ui, sans-serif; font-style: italic; }
+      .annotation-box { fill: #fef2f2; stroke: #dc2626; stroke-width: 1; stroke-dasharray: 4; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="1440" height="1100"/>
+
+  <!-- ========== HEADER ========== -->
+  <rect class="card" x="0" y="0" width="1440" height="72"/>
+  <text x="80" y="44" class="text-dark" font-size="24" font-weight="bold">AI Saved Me</text>
+  <text x="1280" y="44" class="text-light" font-size="14">Close ×</text>
+
+  <!-- ========== MODAL HEADER ========== -->
+  <rect class="primary-bg" x="0" y="72" width="1440" height="100"/>
+  <text x="720" y="115" class="text-dark" font-size="28" font-weight="bold" text-anchor="middle">Make It Your Own</text>
+  <text x="720" y="145" class="text-light" font-size="16" text-anchor="middle">Customize this story's prompts for your specific situation</text>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <g transform="translate(80, 200)">
+    <!-- Left Column: Original Story Context -->
+    <g class="shadow">
+      <rect class="card" width="400" height="700" rx="12"/>
+
+      <text x="25" y="40" class="text-dark" font-size="18" font-weight="bold">Original Story</text>
+
+      <!-- Story Summary -->
+      <g transform="translate(25, 70)">
+        <text x="0" y="0" class="text-light" font-size="12" font-weight="600">STORY</text>
+        <text x="0" y="25" class="text-dark" font-size="14" font-weight="500">Enterprise Damage Claim</text>
+        <text x="0" y="45" class="text-light" font-size="13">Fighting a $3,200 wrongful damage claim</text>
+      </g>
+
+      <line x1="25" y1="140" x2="375" y2="140" stroke="#e5e7eb" stroke-width="1"/>
+
+      <!-- Key Variables -->
+      <g transform="translate(25, 160)">
+        <text x="0" y="0" class="text-light" font-size="12" font-weight="600">KEY VARIABLES USED</text>
+
+        <g transform="translate(0, 25)">
+          <rect class="input-filled" x="0" y="0" width="350" height="40" rx="6"/>
+          <text x="15" y="17" class="text-light" font-size="11">Company</text>
+          <text x="15" y="33" class="text-dark" font-size="14">Enterprise Rent-A-Car</text>
+        </g>
+
+        <g transform="translate(0, 80)">
+          <rect class="input-filled" x="0" y="0" width="350" height="40" rx="6"/>
+          <text x="15" y="17" class="text-light" font-size="11">Dispute Type</text>
+          <text x="15" y="33" class="text-dark" font-size="14">Vehicle damage claim</text>
+        </g>
+
+        <g transform="translate(0, 135)">
+          <rect class="input-filled" x="0" y="0" width="350" height="40" rx="6"/>
+          <text x="15" y="17" class="text-light" font-size="11">Amount</text>
+          <text x="15" y="33" class="text-dark" font-size="14">$3,200</text>
+        </g>
+
+        <g transform="translate(0, 190)">
+          <rect class="input-filled" x="0" y="0" width="350" height="40" rx="6"/>
+          <text x="15" y="17" class="text-light" font-size="11">Evidence Available</text>
+          <text x="15" y="33" class="text-dark" font-size="14">Photos at return, rental agreement</text>
+        </g>
+      </g>
+
+      <line x1="25" y1="420" x2="375" y2="420" stroke="#e5e7eb" stroke-width="1"/>
+
+      <!-- Original Prompt Preview -->
+      <g transform="translate(25, 440)">
+        <text x="0" y="0" class="text-light" font-size="12" font-weight="600">ORIGINAL PROMPT USED</text>
+        <rect class="code-bg" x="0" y="15" width="350" height="100" rx="6"/>
+        <text x="15" y="40" class="code-text" font-size="12">
+          <tspan x="15" dy="0">I received a damage claim for</tspan>
+          <tspan x="15" dy="18" class="code-var">$3,200</tspan>
+          <tspan class="code-text"> from</tspan>
+          <tspan x="15" dy="18" class="code-var">Enterprise</tspan>
+          <tspan class="code-text">. I have photos...</tspan>
+        </text>
+      </g>
+
+      <text x="200" y="580" class="primary" font-size="13" text-anchor="middle">View Full Chat Session →</text>
+    </g>
+
+    <!-- Right Column: Your Customization -->
+    <g transform="translate(440, 0)" class="shadow">
+      <rect class="card" width="480" height="700" rx="12"/>
+
+      <text x="25" y="40" class="text-dark" font-size="18" font-weight="bold">Your Situation</text>
+      <text x="25" y="60" class="text-light" font-size="13">Fill in your details to generate a customized prompt</text>
+
+      <!-- Form Fields -->
+      <g transform="translate(25, 90)">
+        <text x="0" y="0" class="text-dark" font-size="14" font-weight="500">Who are you disputing with? *</text>
+        <rect class="input" x="0" y="15" width="430" height="44" rx="6"/>
+        <text x="15" y="43" class="text-light" font-size="14">e.g., Hertz, your landlord, insurance company...</text>
+      </g>
+
+      <g transform="translate(25, 175)">
+        <text x="0" y="0" class="text-dark" font-size="14" font-weight="500">What type of dispute? *</text>
+        <rect class="input" x="0" y="15" width="430" height="44" rx="6"/>
+        <text x="15" y="43" class="text-light" font-size="14">e.g., damage claim, security deposit, insurance denial...</text>
+      </g>
+
+      <g transform="translate(25, 260)">
+        <text x="0" y="0" class="text-dark" font-size="14" font-weight="500">Amount in dispute *</text>
+        <rect class="input" x="0" y="15" width="200" height="44" rx="6"/>
+        <text x="15" y="43" class="text-light" font-size="14">$ Enter amount</text>
+      </g>
+
+      <g transform="translate(25, 345)">
+        <text x="0" y="0" class="text-dark" font-size="14" font-weight="500">What evidence do you have?</text>
+        <rect class="input" x="0" y="15" width="430" height="80" rx="6"/>
+        <text x="15" y="40" class="text-light" font-size="14">e.g., photos, receipts, emails, contracts...</text>
+      </g>
+
+      <g transform="translate(25, 460)">
+        <text x="0" y="0" class="text-dark" font-size="14" font-weight="500">Any additional context?</text>
+        <rect class="input" x="0" y="15" width="430" height="80" rx="6"/>
+        <text x="15" y="40" class="text-light" font-size="14">Any other details relevant to your situation...</text>
+      </g>
+
+      <!-- Generate Button -->
+      <rect class="primary" x="25" y="580" width="430" height="52" rx="8"/>
+      <text x="240" y="612" class="text-white" font-size="16" font-weight="600" text-anchor="middle">Generate My Custom Prompt</text>
+
+      <!-- Help Text -->
+      <text x="240" y="665" class="text-light" font-size="12" text-anchor="middle">Your information stays private and is not stored</text>
+    </g>
+
+    <!-- Bottom: Generated Prompt Preview -->
+    <g transform="translate(440, 720)" class="shadow">
+      <rect class="card" width="480" height="180" rx="12"/>
+
+      <g transform="translate(20, 20)">
+        <rect class="success-light" width="150" height="28" rx="14"/>
+        <text x="15" y="19" class="success" font-size="12" font-weight="600">Generated Prompt</text>
+      </g>
+
+      <rect class="code-bg" x="20" y="60" width="440" height="80" rx="6"/>
+      <text x="35" y="85" class="code-text" font-size="12">
+        <tspan x="35" dy="0">I received a</tspan>
+        <tspan class="code-var">[dispute_type]</tspan>
+        <tspan class="code-text"> for</tspan>
+        <tspan class="code-var">[amount]</tspan>
+        <tspan class="code-text"> from</tspan>
+        <tspan x="35" dy="18" class="code-var">[company]</tspan>
+        <tspan class="code-text">. I have</tspan>
+        <tspan class="code-var">[evidence]</tspan>
+        <tspan class="code-text">.</tspan>
+        <tspan x="35" dy="18" class="code-text">What are my legal options to dispute this?</tspan>
+      </text>
+
+      <rect class="primary" x="350" y="145" width="110" height="28" rx="6"/>
+      <text x="378" y="164" class="text-white" font-size="12" font-weight="600">Copy Prompt</text>
+    </g>
+  </g>
+
+  <!-- ========== ANNOTATIONS ========== -->
+  <rect class="annotation-box" x="100" y="940" width="200" height="70" rx="4"/>
+  <text x="110" y="960" class="annotation" font-size="11">Left panel shows original</text>
+  <text x="110" y="975" class="annotation" font-size="11">story context and variables</text>
+  <text x="110" y="990" class="annotation" font-size="11">that made it successful</text>
+
+  <rect class="annotation-box" x="1100" y="400" width="200" height="60" rx="4"/>
+  <text x="1110" y="420" class="annotation" font-size="11">Right panel lets users</text>
+  <text x="1110" y="435" class="annotation" font-size="11">input their own details</text>
+  <text x="1110" y="450" class="annotation" font-size="11">to customize the prompt</text>
+
+  <rect class="annotation-box" x="1100" y="800" width="200" height="50" rx="4"/>
+  <text x="1110" y="820" class="annotation" font-size="11">Generated prompt ready</text>
+  <text x="1110" y="835" class="annotation" font-size="11">to copy and use with AI</text>
+</svg>

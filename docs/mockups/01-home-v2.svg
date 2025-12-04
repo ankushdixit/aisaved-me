@@ -1,0 +1,330 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 2200" width="1440" height="2200">
+  <defs>
+    <style>
+      .bg-dark { fill: #0f172a; }
+      .bg-light { fill: #f8fafc; }
+      .card { fill: #ffffff; stroke: #e5e7eb; stroke-width: 1; }
+      .card-dark { fill: #1e293b; stroke: #334155; stroke-width: 1; }
+      .primary { fill: #2563eb; }
+      .primary-glow { fill: #3b82f6; filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5)); }
+      .success { fill: #10b981; }
+      .success-glow { fill: #10b981; filter: drop-shadow(0 0 15px rgba(16, 185, 129, 0.6)); }
+      .text-dark { fill: #0f172a; font-family: system-ui, sans-serif; }
+      .text-medium { fill: #475569; font-family: system-ui, sans-serif; }
+      .text-light { fill: #94a3b8; font-family: system-ui, sans-serif; }
+      .text-white { fill: #ffffff; font-family: system-ui, sans-serif; }
+      .text-glow { fill: #ffffff; font-family: system-ui, sans-serif; filter: drop-shadow(0 0 10px rgba(255,255,255,0.3)); }
+      .ticker-item { fill: #1e293b; }
+      .ticker-amount { fill: #10b981; font-family: system-ui, sans-serif; font-weight: bold; }
+      .ticker-text { fill: #e2e8f0; font-family: system-ui, sans-serif; }
+      .counter-glow { filter: drop-shadow(0 0 30px rgba(16, 185, 129, 0.4)); }
+      .legal-tag { fill: #fef3c7; }
+      .legal-text { fill: #92400e; }
+      .medical-tag { fill: #d1fae5; }
+      .medical-text { fill: #065f46; }
+      .shadow { filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2)); }
+      .pulse { animation: pulse 2s infinite; }
+      .annotation { fill: #dc2626; font-family: system-ui, sans-serif; font-style: italic; }
+      .annotation-box { fill: #fef2f2; stroke: #dc2626; stroke-width: 1; stroke-dasharray: 4; }
+    </style>
+  </defs>
+
+  <!-- ========== DARK HERO SECTION ========== -->
+  <rect class="bg-dark" x="0" y="0" width="1440" height="900"/>
+
+  <!-- Nav -->
+  <g transform="translate(80, 30)">
+    <text x="0" y="24" class="text-white" font-size="24" font-weight="bold">AI Saved Me</text>
+    <text x="600" y="24" class="text-light" font-size="15">Stories</text>
+    <text x="700" y="24" class="text-light" font-size="15">How It Works</text>
+
+    <rect fill="transparent" stroke="#475569" stroke-width="1" x="1080" y="0" width="90" height="40" rx="6"/>
+    <text x="1100" y="26" class="text-light" font-size="14">Sign In</text>
+
+    <rect class="primary" x="1190" y="0" width="130" height="40" rx="6"/>
+    <text x="1207" y="26" class="text-white" font-size="14" font-weight="500">Share a Win</text>
+  </g>
+
+  <!-- Main Headline - Simple and Bold -->
+  <text x="720" y="160" class="text-glow" font-size="56" font-weight="bold" text-anchor="middle">Real people winning with AI.</text>
+  <text x="720" y="210" class="text-light" font-size="20" text-anchor="middle">Watch the victories roll in.</text>
+
+  <!-- ========== LIVE COUNTER - The Big Number ========== -->
+  <g transform="translate(720, 280)" class="counter-glow">
+    <text x="0" y="0" class="text-light" font-size="14" text-anchor="middle" letter-spacing="3">TOTAL SAVED BY OUR COMMUNITY</text>
+    <text x="0" y="80" class="success-glow" font-size="96" font-weight="bold" text-anchor="middle">$2,847,392</text>
+    <text x="0" y="110" class="text-light" font-size="14" text-anchor="middle">and counting...</text>
+  </g>
+
+  <!-- Live Indicator -->
+  <g transform="translate(660, 420)">
+    <circle class="success" cx="8" cy="8" r="8" opacity="0.3"/>
+    <circle class="success" cx="8" cy="8" r="4"/>
+    <text x="24" y="13" class="success" font-size="13" font-weight="600">LIVE</text>
+  </g>
+
+  <!-- ========== VICTORY TICKER - The Star Feature ========== -->
+  <g transform="translate(0, 460)">
+    <!-- Ticker Track Background -->
+    <rect fill="#0f172a" x="0" y="0" width="1440" height="320"/>
+
+    <!-- Gradient Fade Edges -->
+    <defs>
+      <linearGradient id="fadeLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#0f172a;stop-opacity:0" />
+      </linearGradient>
+      <linearGradient id="fadeRight" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#0f172a;stop-opacity:0" />
+        <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+
+    <!-- Ticker Row 1 (scrolls left) -->
+    <g transform="translate(0, 20)">
+      <!-- Win Card 1 -->
+      <g transform="translate(30, 0)">
+        <rect class="card-dark" width="320" height="120" rx="12"/>
+        <rect class="legal-tag" x="15" y="15" width="55" height="22" rx="11"/>
+        <text x="28" y="30" class="legal-text" font-size="10" font-weight="600">Legal</text>
+        <text x="15" y="60" class="ticker-amount" font-size="24">$3,200</text>
+        <text x="105" y="60" class="ticker-text" font-size="14">saved</text>
+        <text x="15" y="85" class="ticker-text" font-size="13">Enterprise damage claim defeated</text>
+        <text x="15" y="105" class="text-light" font-size="11">Ankush D. · 2 hours ago</text>
+      </g>
+
+      <!-- Win Card 2 -->
+      <g transform="translate(370, 0)">
+        <rect class="card-dark" width="320" height="120" rx="12"/>
+        <rect class="medical-tag" x="15" y="15" width="65" height="22" rx="11"/>
+        <text x="25" y="30" class="medical-text" font-size="10" font-weight="600">Medical</text>
+        <text x="15" y="60" class="success" font-size="18" font-weight="bold">Diagnosis confirmed</text>
+        <text x="15" y="85" class="ticker-text" font-size="13">AI identified kidney stones, doctor agreed</text>
+        <text x="15" y="105" class="text-light" font-size="11">Raj P. · 5 hours ago</text>
+      </g>
+
+      <!-- Win Card 3 -->
+      <g transform="translate(710, 0)">
+        <rect class="card-dark" width="320" height="120" rx="12"/>
+        <rect class="legal-tag" x="15" y="15" width="55" height="22" rx="11"/>
+        <text x="28" y="30" class="legal-text" font-size="10" font-weight="600">Legal</text>
+        <text x="15" y="60" class="ticker-amount" font-size="24">$2,400</text>
+        <text x="105" y="60" class="ticker-text" font-size="14">recovered</text>
+        <text x="15" y="85" class="ticker-text" font-size="13">Security deposit returned in full</text>
+        <text x="15" y="105" class="text-light" font-size="11">Sarah M. · 8 hours ago</text>
+      </g>
+
+      <!-- Win Card 4 -->
+      <g transform="translate(1050, 0)">
+        <rect class="card-dark" width="320" height="120" rx="12"/>
+        <rect class="legal-tag" x="15" y="15" width="55" height="22" rx="11"/>
+        <text x="28" y="30" class="legal-text" font-size="10" font-weight="600">Legal</text>
+        <text x="15" y="60" class="ticker-amount" font-size="24">$12,000</text>
+        <text x="130" y="60" class="ticker-text" font-size="14">claim approved</text>
+        <text x="15" y="85" class="ticker-text" font-size="13">Insurance denial overturned</text>
+        <text x="15" y="105" class="text-light" font-size="11">Lisa K. · 1 day ago</text>
+      </g>
+    </g>
+
+    <!-- Ticker Row 2 (scrolls right) -->
+    <g transform="translate(0, 160)">
+      <!-- Win Card 5 -->
+      <g transform="translate(80, 0)">
+        <rect class="card-dark" width="320" height="120" rx="12"/>
+        <rect class="legal-tag" x="15" y="15" width="55" height="22" rx="11"/>
+        <text x="28" y="30" class="legal-text" font-size="10" font-weight="600">Legal</text>
+        <text x="15" y="60" class="ticker-amount" font-size="24">$5,500</text>
+        <text x="105" y="60" class="ticker-text" font-size="14">won</text>
+        <text x="15" y="85" class="ticker-text" font-size="13">Contractor paid after small claims prep</text>
+        <text x="15" y="105" class="text-light" font-size="11">Mike R. · 1 day ago</text>
+      </g>
+
+      <!-- Win Card 6 -->
+      <g transform="translate(420, 0)">
+        <rect class="card-dark" width="320" height="120" rx="12"/>
+        <rect class="medical-tag" x="15" y="15" width="65" height="22" rx="11"/>
+        <text x="25" y="30" class="medical-text" font-size="10" font-weight="600">Medical</text>
+        <text x="15" y="60" class="success" font-size="18" font-weight="bold">ER visit avoided</text>
+        <text x="15" y="85" class="ticker-text" font-size="13">AI symptom check saved unnecessary trip</text>
+        <text x="15" y="105" class="text-light" font-size="11">James T. · 2 days ago</text>
+      </g>
+
+      <!-- Win Card 7 -->
+      <g transform="translate(760, 0)">
+        <rect class="card-dark" width="320" height="120" rx="12"/>
+        <rect class="legal-tag" x="15" y="15" width="55" height="22" rx="11"/>
+        <text x="28" y="30" class="legal-text" font-size="10" font-weight="600">Legal</text>
+        <text x="15" y="60" class="ticker-amount" font-size="24">$1,500</text>
+        <text x="105" y="60" class="ticker-text" font-size="14">fine removed</text>
+        <text x="15" y="85" class="ticker-text" font-size="13">HOA fine overturned with AI research</text>
+        <text x="15" y="105" class="text-light" font-size="11">David P. · 2 days ago</text>
+      </g>
+
+      <!-- Win Card 8 -->
+      <g transform="translate(1100, 0)">
+        <rect class="card-dark" width="320" height="120" rx="12"/>
+        <rect class="legal-tag" x="15" y="15" width="55" height="22" rx="11"/>
+        <text x="28" y="30" class="legal-text" font-size="10" font-weight="600">Legal</text>
+        <text x="15" y="60" class="success" font-size="18" font-weight="bold">Debt forgiven</text>
+        <text x="15" y="85" class="ticker-text" font-size="13">Collection harassment stopped with AI letter</text>
+        <text x="15" y="105" class="text-light" font-size="11">Tom B. · 3 days ago</text>
+      </g>
+    </g>
+
+    <!-- Fade overlays -->
+    <rect fill="url(#fadeLeft)" x="0" y="0" width="100" height="320"/>
+    <rect fill="url(#fadeRight)" x="1340" y="0" width="100" height="320"/>
+  </g>
+
+  <!-- Ticker instruction -->
+  <text x="720" y="820" class="text-light" font-size="14" text-anchor="middle">Click any card to read the full story →</text>
+
+  <!-- CTA Buttons -->
+  <g transform="translate(520, 850)">
+    <rect class="primary-glow" x="0" y="0" width="200" height="52" rx="8"/>
+    <text x="50" y="32" class="text-white" font-size="16" font-weight="600">Browse Stories</text>
+
+    <rect fill="transparent" stroke="#475569" stroke-width="2" x="220" y="0" width="200" height="52" rx="8"/>
+    <text x="265" y="32" class="text-white" font-size="16" font-weight="600">Share a Win</text>
+  </g>
+
+  <!-- ========== LIGHT SECTION - Featured Story ========== -->
+  <rect class="bg-light" x="0" y="920" width="1440" height="500"/>
+
+  <text x="720" y="990" class="text-dark" font-size="36" font-weight="bold" text-anchor="middle">Featured Story</text>
+  <text x="720" y="1025" class="text-medium" font-size="16" text-anchor="middle">See exactly how AI made the difference</text>
+
+  <!-- Featured Story Card - Large -->
+  <g transform="translate(180, 1060)" class="shadow">
+    <rect class="card" width="1080" height="320" rx="16"/>
+
+    <!-- Left: Image -->
+    <rect fill="#e2e8f0" x="0" y="0" width="400" height="320" rx="16 0 0 16"/>
+    <text x="200" y="165" class="text-medium" font-size="14" text-anchor="middle">Story Hero Image</text>
+
+    <!-- Right: Content -->
+    <g transform="translate(430, 30)">
+      <rect class="legal-tag" x="0" y="0" width="80" height="28" rx="14"/>
+      <text x="18" y="19" class="legal-text" font-size="12" font-weight="600">Legal Win</text>
+
+      <text x="0" y="65" class="text-dark" font-size="28" font-weight="bold">How I Beat Enterprise's</text>
+      <text x="0" y="100" class="text-dark" font-size="28" font-weight="bold">$3,200 Damage Claim</text>
+
+      <text x="0" y="145" class="text-medium" font-size="16">Using Claude, I built a systematic legal defense that made</text>
+      <text x="0" y="170" class="text-medium" font-size="16">them drop the claim entirely within one week.</text>
+
+      <!-- Chat Preview Snippet -->
+      <g transform="translate(0, 195)">
+        <rect fill="#f1f5f9" x="0" y="0" width="600" height="50" rx="8"/>
+        <text x="15" y="20" class="text-light" font-size="12">From the AI chat:</text>
+        <text x="15" y="38" class="text-dark" font-size="13" font-style="italic">"Based on your evidence, Enterprise has no legal basis for..."</text>
+      </g>
+
+      <!-- Author and CTA -->
+      <g transform="translate(0, 265)">
+        <circle fill="#cbd5e1" cx="18" cy="18" r="18"/>
+        <text x="48" y="15" class="text-dark" font-size="14" font-weight="500">Ankush D.</text>
+        <text x="48" y="33" class="text-light" font-size="12">5 min read · $3,200 saved</text>
+
+        <rect class="primary" x="450" y="0" width="150" height="40" rx="6"/>
+        <text x="480" y="26" class="text-white" font-size="14" font-weight="600">Read Story →</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ========== CATEGORY QUICK ACCESS ========== -->
+  <rect class="bg-light" x="0" y="1420" width="1440" height="300"/>
+
+  <text x="720" y="1480" class="text-dark" font-size="32" font-weight="bold" text-anchor="middle">Jump Into a Category</text>
+
+  <!-- Legal Card -->
+  <g transform="translate(320, 1520)" class="shadow">
+    <rect class="card" width="380" height="160" rx="12"/>
+    <rect fill="#fef3c7" x="0" y="0" width="8" height="160" rx="12 0 0 12"/>
+    <text x="35" y="45" class="text-dark" font-size="24" font-weight="bold">Legal Wins</text>
+    <text x="35" y="75" class="text-medium" font-size="14">Disputes, claims, contracts, tenant rights</text>
+    <text x="35" y="105" class="text-dark" font-size="32" font-weight="bold">142</text>
+    <text x="100" y="105" class="text-medium" font-size="14">stories</text>
+    <text x="35" y="135" class="primary" font-size="14" font-weight="600">Explore Legal Wins →</text>
+  </g>
+
+  <!-- Medical Card -->
+  <g transform="translate(740, 1520)" class="shadow">
+    <rect class="card" width="380" height="160" rx="12"/>
+    <rect fill="#d1fae5" x="0" y="0" width="8" height="160" rx="12 0 0 12"/>
+    <text x="35" y="45" class="text-dark" font-size="24" font-weight="bold">Medical Wins</text>
+    <text x="35" y="75" class="text-medium" font-size="14">Symptoms, diagnoses, insurance, research</text>
+    <text x="35" y="105" class="text-dark" font-size="32" font-weight="bold">98</text>
+    <text x="70" y="105" class="text-medium" font-size="14">stories</text>
+    <text x="35" y="135" class="primary" font-size="14" font-weight="600">Explore Medical Wins →</text>
+  </g>
+
+  <!-- ========== HOW IT WORKS - Minimal ========== -->
+  <rect fill="#ffffff" x="0" y="1720" width="1440" height="280"/>
+
+  <text x="720" y="1780" class="text-dark" font-size="28" font-weight="bold" text-anchor="middle">How It Works</text>
+
+  <g transform="translate(200, 1820)">
+    <circle fill="#eff6ff" cx="30" cy="30" r="30"/>
+    <text x="30" y="38" class="primary" font-size="20" font-weight="bold" text-anchor="middle">1</text>
+    <text x="30" y="85" class="text-dark" font-size="16" font-weight="600" text-anchor="middle">Use AI to win</text>
+    <text x="30" y="105" class="text-light" font-size="13" text-anchor="middle">Solve your problem</text>
+  </g>
+
+  <line x1="320" y1="1850" x2="420" y2="1850" stroke="#e2e8f0" stroke-width="2"/>
+
+  <g transform="translate(500, 1820)">
+    <circle fill="#eff6ff" cx="30" cy="30" r="30"/>
+    <text x="30" y="38" class="primary" font-size="20" font-weight="bold" text-anchor="middle">2</text>
+    <text x="30" y="85" class="text-dark" font-size="16" font-weight="600" text-anchor="middle">Share your story</text>
+    <text x="30" y="105" class="text-light" font-size="13" text-anchor="middle">With chat link proof</text>
+  </g>
+
+  <line x1="620" y1="1850" x2="720" y2="1850" stroke="#e2e8f0" stroke-width="2"/>
+
+  <g transform="translate(800, 1820)">
+    <circle fill="#eff6ff" cx="30" cy="30" r="30"/>
+    <text x="30" y="38" class="primary" font-size="20" font-weight="bold" text-anchor="middle">3</text>
+    <text x="30" y="85" class="text-dark" font-size="16" font-weight="600" text-anchor="middle">We protect privacy</text>
+    <text x="30" y="105" class="text-light" font-size="13" text-anchor="middle">Auto-redact sensitive info</text>
+  </g>
+
+  <line x1="920" y1="1850" x2="1020" y2="1850" stroke="#e2e8f0" stroke-width="2"/>
+
+  <g transform="translate(1100, 1820)">
+    <circle fill="#eff6ff" cx="30" cy="30" r="30"/>
+    <text x="30" y="38" class="primary" font-size="20" font-weight="bold" text-anchor="middle">4</text>
+    <text x="30" y="85" class="text-dark" font-size="16" font-weight="600" text-anchor="middle">Inspire others</text>
+    <text x="30" y="105" class="text-light" font-size="13" text-anchor="middle">Help someone win too</text>
+  </g>
+
+  <!-- ========== FINAL CTA ========== -->
+  <rect fill="#0f172a" x="0" y="2000" width="1440" height="200"/>
+
+  <text x="720" y="2070" class="text-white" font-size="32" font-weight="bold" text-anchor="middle">Got an AI win? Share it.</text>
+  <text x="720" y="2105" class="text-light" font-size="16" text-anchor="middle">Your story could help someone facing the same challenge.</text>
+
+  <rect class="primary-glow" x="595" y="2130" width="250" height="50" rx="8"/>
+  <text x="665" y="2162" class="text-white" font-size="16" font-weight="600">Share Your Story →</text>
+
+  <!-- ========== ANNOTATIONS ========== -->
+  <rect class="annotation-box" x="1250" y="260" width="170" height="70" rx="4"/>
+  <text x="1260" y="285" class="annotation" font-size="11">Giant counter creates</text>
+  <text x="1260" y="300" class="annotation" font-size="11">immediate impact -</text>
+  <text x="1260" y="315" class="annotation" font-size="11">"this is a movement"</text>
+
+  <rect class="annotation-box" x="20" y="520" width="170" height="80" rx="4"/>
+  <text x="30" y="545" class="annotation" font-size="11">Victory ticker: 2 rows</text>
+  <text x="30" y="560" class="annotation" font-size="11">scrolling opposite</text>
+  <text x="30" y="575" class="annotation" font-size="11">directions. Each card</text>
+  <text x="30" y="590" class="annotation" font-size="11">is clickable.</text>
+
+  <rect class="annotation-box" x="1250" y="520" width="170" height="60" rx="4"/>
+  <text x="1260" y="545" class="annotation" font-size="11">Fade edges create</text>
+  <text x="1260" y="560" class="annotation" font-size="11">infinite scroll feel</text>
+
+  <rect class="annotation-box" x="20" y="1100" width="170" height="60" rx="4"/>
+  <text x="30" y="1120" class="annotation" font-size="11">Featured story with</text>
+  <text x="30" y="1135" class="annotation" font-size="11">chat snippet preview</text>
+  <text x="30" y="1150" class="annotation" font-size="11">shows "the magic"</text>
+</svg>

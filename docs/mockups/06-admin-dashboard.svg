@@ -1,0 +1,304 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1200" width="1440" height="1200">
+  <defs>
+    <style>
+      .bg { fill: #f3f4f6; }
+      .sidebar { fill: #111827; }
+      .card { fill: #ffffff; stroke: #e5e7eb; stroke-width: 1; }
+      .primary { fill: #2563eb; }
+      .primary-light { fill: #dbeafe; }
+      .success { fill: #059669; }
+      .success-light { fill: #d1fae5; }
+      .warning { fill: #d97706; }
+      .warning-light { fill: #fef3c7; }
+      .danger { fill: #dc2626; }
+      .text-dark { fill: #111827; font-family: system-ui, sans-serif; }
+      .text-medium { fill: #374151; font-family: system-ui, sans-serif; }
+      .text-light { fill: #6b7280; font-family: system-ui, sans-serif; }
+      .text-white { fill: #ffffff; font-family: system-ui, sans-serif; }
+      .text-sidebar { fill: #9ca3af; font-family: system-ui, sans-serif; }
+      .shadow { filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05)); }
+      .table-header { fill: #f9fafb; }
+      .table-row-hover { fill: #f9fafb; }
+      .status-pending { fill: #fef3c7; }
+      .status-pending-text { fill: #92400e; }
+      .status-approved { fill: #d1fae5; }
+      .status-approved-text { fill: #065f46; }
+      .status-published { fill: #dbeafe; }
+      .status-published-text { fill: #1e40af; }
+      .annotation { fill: #dc2626; font-family: system-ui, sans-serif; font-style: italic; }
+      .annotation-box { fill: #fef2f2; stroke: #dc2626; stroke-width: 1; stroke-dasharray: 4; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="1440" height="1200"/>
+
+  <!-- ========== SIDEBAR ========== -->
+  <rect class="sidebar" x="0" y="0" width="260" height="1200"/>
+
+  <!-- Logo -->
+  <text x="30" y="45" class="text-white" font-size="20" font-weight="bold">AI Saved Me</text>
+  <text x="30" y="65" class="text-sidebar" font-size="12">Admin Dashboard</text>
+
+  <!-- Nav Items -->
+  <g transform="translate(0, 100)">
+    <!-- Dashboard - Active -->
+    <rect class="primary" x="15" y="0" width="230" height="44" rx="8"/>
+    <text x="50" y="28" class="text-white" font-size="14">Dashboard</text>
+
+    <!-- Stories -->
+    <g transform="translate(0, 55)">
+      <text x="50" y="28" class="text-sidebar" font-size="14">Stories</text>
+      <rect class="warning-light" x="170" y="10" width="30" height="20" rx="10"/>
+      <text x="180" y="25" class="warning" font-size="11" font-weight="bold">12</text>
+    </g>
+
+    <!-- Users -->
+    <g transform="translate(0, 110)">
+      <text x="50" y="28" class="text-sidebar" font-size="14">Users</text>
+    </g>
+
+    <!-- Analytics -->
+    <g transform="translate(0, 165)">
+      <text x="50" y="28" class="text-sidebar" font-size="14">Analytics</text>
+    </g>
+
+    <!-- Settings -->
+    <g transform="translate(0, 220)">
+      <text x="50" y="28" class="text-sidebar" font-size="14">Settings</text>
+    </g>
+  </g>
+
+  <!-- Admin User -->
+  <g transform="translate(15, 1130)">
+    <rect fill="#1f2937" width="230" height="50" rx="8"/>
+    <circle fill="#4b5563" cx="30" cy="25" r="18"/>
+    <text x="60" y="20" class="text-white" font-size="14" font-weight="500">Ankush Dixit</text>
+    <text x="60" y="38" class="text-sidebar" font-size="12">Admin</text>
+  </g>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <!-- Header -->
+  <g transform="translate(290, 30)">
+    <text x="0" y="0" class="text-dark" font-size="28" font-weight="bold">Dashboard</text>
+    <text x="0" y="28" class="text-light" font-size="14">Welcome back! Here's what's happening today.</text>
+  </g>
+
+  <!-- Quick Actions -->
+  <g transform="translate(1000, 20)">
+    <rect class="card shadow" x="0" y="0" width="140" height="40" rx="6"/>
+    <text x="20" y="26" class="text-medium" font-size="14">+ Add Story</text>
+  </g>
+
+  <!-- ========== STATS CARDS ========== -->
+  <g transform="translate(290, 90)">
+    <!-- Pending Review -->
+    <g class="shadow">
+      <rect class="card" width="200" height="120" rx="12"/>
+      <rect class="warning-light" x="20" y="20" width="40" height="40" rx="8"/>
+      <text x="32" y="47" class="warning" font-size="18">!</text>
+      <text x="20" y="90" class="text-light" font-size="13">Pending Review</text>
+      <text x="20" y="110" class="text-dark" font-size="28" font-weight="bold">12</text>
+      <text x="60" y="108" class="warning" font-size="12">↑ 3 new</text>
+    </g>
+
+    <!-- Published -->
+    <g transform="translate(220, 0)" class="shadow">
+      <rect class="card" width="200" height="120" rx="12"/>
+      <rect class="success-light" x="20" y="20" width="40" height="40" rx="8"/>
+      <text x="32" y="47" class="success" font-size="18">✓</text>
+      <text x="20" y="90" class="text-light" font-size="13">Published</text>
+      <text x="20" y="110" class="text-dark" font-size="28" font-weight="bold">142</text>
+      <text x="80" y="108" class="success" font-size="12">↑ 5 this week</text>
+    </g>
+
+    <!-- Total Users -->
+    <g transform="translate(440, 0)" class="shadow">
+      <rect class="card" width="200" height="120" rx="12"/>
+      <rect class="primary-light" x="20" y="20" width="40" height="40" rx="8"/>
+      <text x="32" y="47" class="primary" font-size="18">U</text>
+      <text x="20" y="90" class="text-light" font-size="13">Total Users</text>
+      <text x="20" y="110" class="text-dark" font-size="28" font-weight="bold">1,247</text>
+      <text x="100" y="108" class="success" font-size="12">↑ 12%</text>
+    </g>
+
+    <!-- Total Views -->
+    <g transform="translate(660, 0)" class="shadow">
+      <rect class="card" width="200" height="120" rx="12"/>
+      <rect fill="#e0e7ff" x="20" y="20" width="40" height="40" rx="8"/>
+      <text x="32" y="47" fill="#4338ca" font-size="18">V</text>
+      <text x="20" y="90" class="text-light" font-size="13">Page Views</text>
+      <text x="20" y="110" class="text-dark" font-size="28" font-weight="bold">24.5K</text>
+      <text x="110" y="108" class="success" font-size="12">↑ 8%</text>
+    </g>
+  </g>
+
+  <!-- ========== PENDING STORIES TABLE ========== -->
+  <g transform="translate(290, 240)" class="shadow">
+    <rect class="card" width="850" height="500" rx="12"/>
+
+    <!-- Table Header -->
+    <rect class="table-header" x="1" y="1" width="848" height="50" rx="11 11 0 0"/>
+    <text x="25" y="32" class="text-dark" font-size="16" font-weight="bold">Stories Pending Review</text>
+    <text x="720" y="32" class="primary" font-size="14">View All →</text>
+
+    <!-- Column Headers -->
+    <g transform="translate(0, 60)">
+      <line x1="0" y1="0" x2="850" y2="0" stroke="#e5e7eb" stroke-width="1"/>
+      <text x="25" y="30" class="text-light" font-size="12" font-weight="600">STORY</text>
+      <text x="400" y="30" class="text-light" font-size="12" font-weight="600">AUTHOR</text>
+      <text x="530" y="30" class="text-light" font-size="12" font-weight="600">CATEGORY</text>
+      <text x="640" y="30" class="text-light" font-size="12" font-weight="600">STATUS</text>
+      <text x="750" y="30" class="text-light" font-size="12" font-weight="600">ACTIONS</text>
+      <line x1="0" y1="45" x2="850" y2="45" stroke="#e5e7eb" stroke-width="1"/>
+    </g>
+
+    <!-- Row 1 -->
+    <g transform="translate(0, 115)">
+      <rect class="table-row-hover" x="1" y="0" width="848" height="70"/>
+      <text x="25" y="25" class="text-dark" font-size="14" font-weight="500">Insurance Claim Denied? How I Got It Approved</text>
+      <text x="25" y="45" class="text-light" font-size="12">Submitted 2 hours ago</text>
+      <text x="400" y="35" class="text-medium" font-size="13">Lisa K.</text>
+      <rect class="status-pending" x="530" y="18" width="60" height="24" rx="12"/>
+      <text x="542" y="35" class="status-pending-text" font-size="11">Legal</text>
+      <rect class="status-pending" x="640" y="18" width="70" height="24" rx="12"/>
+      <text x="652" y="35" class="status-pending-text" font-size="11">Pending</text>
+      <rect class="success" x="750" y="18" width="35" height="24" rx="4"/>
+      <text x="758" y="35" class="text-white" font-size="11">✓</text>
+      <rect class="danger" x="795" y="18" width="35" height="24" rx="4"/>
+      <text x="803" y="35" class="text-white" font-size="11">✕</text>
+      <line x1="0" y1="70" x2="850" y2="70" stroke="#e5e7eb" stroke-width="1"/>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(0, 185)">
+      <text x="25" y="25" class="text-dark" font-size="14" font-weight="500">AI Diagnosed My Rare Condition When Doctors Couldn't</text>
+      <text x="25" y="45" class="text-light" font-size="12">Submitted 5 hours ago</text>
+      <text x="400" y="35" class="text-medium" font-size="13">David R.</text>
+      <rect class="status-approved" x="530" y="18" width="70" height="24" rx="12"/>
+      <text x="540" y="35" class="status-approved-text" font-size="11">Medical</text>
+      <rect class="status-pending" x="640" y="18" width="70" height="24" rx="12"/>
+      <text x="652" y="35" class="status-pending-text" font-size="11">Pending</text>
+      <rect class="success" x="750" y="18" width="35" height="24" rx="4"/>
+      <text x="758" y="35" class="text-white" font-size="11">✓</text>
+      <rect class="danger" x="795" y="18" width="35" height="24" rx="4"/>
+      <text x="803" y="35" class="text-white" font-size="11">✕</text>
+      <line x1="0" y1="70" x2="850" y2="70" stroke="#e5e7eb" stroke-width="1"/>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(0, 255)">
+      <text x="25" y="25" class="text-dark" font-size="14" font-weight="500">HOA Fine Overturned Using AI Research</text>
+      <text x="25" y="45" class="text-light" font-size="12">Submitted yesterday</text>
+      <text x="400" y="35" class="text-medium" font-size="13">Michael P.</text>
+      <rect class="status-pending" x="530" y="18" width="60" height="24" rx="12"/>
+      <text x="542" y="35" class="status-pending-text" font-size="11">Legal</text>
+      <rect class="status-pending" x="640" y="18" width="70" height="24" rx="12"/>
+      <text x="652" y="35" class="status-pending-text" font-size="11">Pending</text>
+      <rect class="success" x="750" y="18" width="35" height="24" rx="4"/>
+      <text x="758" y="35" class="text-white" font-size="11">✓</text>
+      <rect class="danger" x="795" y="18" width="35" height="24" rx="4"/>
+      <text x="803" y="35" class="text-white" font-size="11">✕</text>
+      <line x1="0" y1="70" x2="850" y2="70" stroke="#e5e7eb" stroke-width="1"/>
+    </g>
+
+    <!-- Row 4 -->
+    <g transform="translate(0, 325)">
+      <text x="25" y="25" class="text-dark" font-size="14" font-weight="500">Employment Dispute: Getting Unpaid Wages</text>
+      <text x="25" y="45" class="text-light" font-size="12">Submitted 2 days ago</text>
+      <text x="400" y="35" class="text-medium" font-size="13">Maria G.</text>
+      <rect class="status-pending" x="530" y="18" width="60" height="24" rx="12"/>
+      <text x="542" y="35" class="status-pending-text" font-size="11">Legal</text>
+      <rect class="status-approved" x="640" y="18" width="70" height="24" rx="12"/>
+      <text x="650" y="35" class="status-approved-text" font-size="11">Approved</text>
+      <rect class="primary" x="750" y="18" width="70" height="24" rx="4"/>
+      <text x="762" y="35" class="text-white" font-size="11">Publish</text>
+      <line x1="0" y1="70" x2="850" y2="70" stroke="#e5e7eb" stroke-width="1"/>
+    </g>
+
+    <!-- Row 5 -->
+    <g transform="translate(0, 395)">
+      <text x="25" y="25" class="text-dark" font-size="14" font-weight="500">Debt Collection Harassment Stopped</text>
+      <text x="25" y="45" class="text-light" font-size="12">Submitted 3 days ago</text>
+      <text x="400" y="35" class="text-medium" font-size="13">Tom B.</text>
+      <rect class="status-pending" x="530" y="18" width="60" height="24" rx="12"/>
+      <text x="542" y="35" class="status-pending-text" font-size="11">Legal</text>
+      <rect class="status-published" x="640" y="18" width="75" height="24" rx="12"/>
+      <text x="650" y="35" class="status-published-text" font-size="11">Published</text>
+      <text x="760" y="35" class="primary" font-size="12">View →</text>
+    </g>
+  </g>
+
+  <!-- ========== RECENT ACTIVITY ========== -->
+  <g transform="translate(290, 770)" class="shadow">
+    <rect class="card" width="400" height="250" rx="12"/>
+    <text x="25" y="35" class="text-dark" font-size="16" font-weight="bold">Recent Activity</text>
+
+    <g transform="translate(25, 60)">
+      <circle class="success" cx="6" cy="6" r="6"/>
+      <text x="25" y="10" class="text-medium" font-size="13">Story published: "Tenant Rights Victory"</text>
+      <text x="25" y="28" class="text-light" font-size="11">2 hours ago</text>
+    </g>
+
+    <g transform="translate(25, 110)">
+      <circle class="primary" cx="6" cy="6" r="6"/>
+      <text x="25" y="10" class="text-medium" font-size="13">New user registered: john@example.com</text>
+      <text x="25" y="28" class="text-light" font-size="11">4 hours ago</text>
+    </g>
+
+    <g transform="translate(25, 160)">
+      <circle class="warning" cx="6" cy="6" r="6"/>
+      <text x="25" y="10" class="text-medium" font-size="13">New story submitted for review</text>
+      <text x="25" y="28" class="text-light" font-size="11">5 hours ago</text>
+    </g>
+
+    <g transform="translate(25, 210)">
+      <circle class="success" cx="6" cy="6" r="6"/>
+      <text x="25" y="10" class="text-medium" font-size="13">Story approved: "Insurance Claim Success"</text>
+      <text x="25" y="28" class="text-light" font-size="11">Yesterday</text>
+    </g>
+  </g>
+
+  <!-- ========== QUICK STATS ========== -->
+  <g transform="translate(720, 770)" class="shadow">
+    <rect class="card" width="420" height="250" rx="12"/>
+    <text x="25" y="35" class="text-dark" font-size="16" font-weight="bold">This Week</text>
+
+    <g transform="translate(25, 70)">
+      <text x="0" y="0" class="text-light" font-size="13">New Submissions</text>
+      <text x="300" y="0" class="text-dark" font-size="16" font-weight="bold">24</text>
+    </g>
+
+    <g transform="translate(25, 110)">
+      <text x="0" y="0" class="text-light" font-size="13">Stories Published</text>
+      <text x="300" y="0" class="text-dark" font-size="16" font-weight="bold">18</text>
+    </g>
+
+    <g transform="translate(25, 150)">
+      <text x="0" y="0" class="text-light" font-size="13">New Users</text>
+      <text x="300" y="0" class="text-dark" font-size="16" font-weight="bold">156</text>
+    </g>
+
+    <g transform="translate(25, 190)">
+      <text x="0" y="0" class="text-light" font-size="13">Total Engagement</text>
+      <text x="300" y="0" class="text-dark" font-size="16" font-weight="bold">2,847</text>
+    </g>
+
+    <g transform="translate(25, 230)">
+      <text x="0" y="0" class="text-light" font-size="13">Avg. Time on Site</text>
+      <text x="300" y="0" class="text-dark" font-size="16" font-weight="bold">4m 32s</text>
+    </g>
+  </g>
+
+  <!-- ========== ANNOTATIONS ========== -->
+  <rect class="annotation-box" x="10" y="800" width="170" height="60" rx="4"/>
+  <text x="20" y="820" class="annotation" font-size="11">Sidebar navigation</text>
+  <text x="20" y="835" class="annotation" font-size="11">with pending count</text>
+  <text x="20" y="850" class="annotation" font-size="11">badge on Stories</text>
+
+  <rect class="annotation-box" x="1160" y="400" width="170" height="70" rx="4"/>
+  <text x="1170" y="420" class="annotation" font-size="11">Approve/Reject actions</text>
+  <text x="1170" y="435" class="annotation" font-size="11">for pending stories</text>
+  <text x="1170" y="450" class="annotation" font-size="11">Publish for approved</text>
+  <text x="1170" y="465" class="annotation" font-size="11">ones</text>
+</svg>

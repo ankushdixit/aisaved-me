@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900">
+  <defs>
+    <style>
+      .bg-left { fill: #1e40af; }
+      .bg-right { fill: #f9fafb; }
+      .card { fill: #ffffff; stroke: #e5e7eb; stroke-width: 1; }
+      .primary { fill: #2563eb; }
+      .google-btn { fill: #ffffff; stroke: #e5e7eb; stroke-width: 1; }
+      .text-dark { fill: #111827; font-family: system-ui, sans-serif; }
+      .text-medium { fill: #374151; font-family: system-ui, sans-serif; }
+      .text-light { fill: #6b7280; font-family: system-ui, sans-serif; }
+      .text-white { fill: #ffffff; font-family: system-ui, sans-serif; }
+      .input { fill: #ffffff; stroke: #d1d5db; stroke-width: 1; }
+      .shadow { filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.15)); }
+      .annotation { fill: #dc2626; font-family: system-ui, sans-serif; font-style: italic; }
+      .annotation-box { fill: #fef2f2; stroke: #dc2626; stroke-width: 1; stroke-dasharray: 4; }
+    </style>
+  </defs>
+
+  <!-- Split Background -->
+  <rect class="bg-left" x="0" y="0" width="720" height="900"/>
+  <rect class="bg-right" x="720" y="0" width="720" height="900"/>
+
+  <!-- ========== LEFT SIDE: BRANDING ========== -->
+  <g transform="translate(80, 80)">
+    <!-- Logo -->
+    <text x="0" y="0" class="text-white" font-size="28" font-weight="bold">AI Saved Me</text>
+
+    <!-- Tagline -->
+    <text x="0" y="200" class="text-white" font-size="48" font-weight="bold">
+      <tspan x="0" dy="0">Real People.</tspan>
+      <tspan x="0" dy="60">Real AI Wins.</tspan>
+    </text>
+
+    <text x="0" y="340" fill="#93c5fd" font-size="18" font-family="system-ui, sans-serif">
+      <tspan x="0" dy="0">Join thousands who have shared their AI success</tspan>
+      <tspan x="0" dy="28">stories and inspired others to solve real problems.</tspan>
+    </text>
+
+    <!-- Stats -->
+    <g transform="translate(0, 450)">
+      <g transform="translate(0, 0)">
+        <text x="0" y="0" class="text-white" font-size="36" font-weight="bold">$2.4M+</text>
+        <text x="0" y="30" fill="#93c5fd" font-size="14" font-family="system-ui, sans-serif">Saved by our community</text>
+      </g>
+      <g transform="translate(200, 0)">
+        <text x="0" y="0" class="text-white" font-size="36" font-weight="bold">500+</text>
+        <text x="0" y="30" fill="#93c5fd" font-size="14" font-family="system-ui, sans-serif">Success stories</text>
+      </g>
+      <g transform="translate(400, 0)">
+        <text x="0" y="0" class="text-white" font-size="36" font-weight="bold">15K+</text>
+        <text x="0" y="30" fill="#93c5fd" font-size="14" font-family="system-ui, sans-serif">Lives impacted</text>
+      </g>
+    </g>
+
+    <!-- Testimonial -->
+    <g transform="translate(0, 580)">
+      <rect fill="#1e3a8a" width="560" height="140" rx="12"/>
+      <text x="25" y="40" fill="#93c5fd" font-size="16" font-style="italic" font-family="system-ui, sans-serif">
+        <tspan x="25" dy="0">"Claude helped me save $3,200 against Enterprise's</tspan>
+        <tspan x="25" dy="24">wrongful damage claim. This platform helped me share</tspan>
+        <tspan x="25" dy="24">my strategy so others can do the same."</tspan>
+      </text>
+      <text x="25" y="120" class="text-white" font-size="14" font-family="system-ui, sans-serif">— Ankush D., Legal Win</text>
+    </g>
+  </g>
+
+  <!-- ========== RIGHT SIDE: AUTH FORM ========== -->
+  <g transform="translate(840, 200)" class="shadow">
+    <rect class="card" width="480" height="500" rx="16"/>
+
+    <!-- Header -->
+    <text x="240" y="50" class="text-dark" font-size="28" font-weight="bold" text-anchor="middle">Welcome Back</text>
+    <text x="240" y="80" class="text-light" font-size="14" text-anchor="middle">Sign in to share or read AI success stories</text>
+
+    <!-- Google Sign In Button -->
+    <g transform="translate(40, 120)">
+      <rect class="google-btn shadow" width="400" height="56" rx="8"/>
+      <!-- Google Logo Placeholder -->
+      <circle fill="#ea4335" cx="80" cy="28" r="12"/>
+      <text x="110" y="34" class="text-dark" font-size="16" font-weight="500">Continue with Google</text>
+    </g>
+
+    <!-- Divider -->
+    <g transform="translate(40, 210)">
+      <line x1="0" y1="0" x2="170" y2="0" stroke="#e5e7eb" stroke-width="1"/>
+      <text x="200" y="5" class="text-light" font-size="12" text-anchor="middle">OR</text>
+      <line x1="230" y1="0" x2="400" y2="0" stroke="#e5e7eb" stroke-width="1"/>
+    </g>
+
+    <!-- Email Input -->
+    <g transform="translate(40, 250)">
+      <text x="0" y="0" class="text-medium" font-size="14" font-weight="500">Email</text>
+      <rect class="input" x="0" y="15" width="400" height="48" rx="8"/>
+      <text x="15" y="45" class="text-light" font-size="14">you@example.com</text>
+    </g>
+
+    <!-- Password Input -->
+    <g transform="translate(40, 340)">
+      <text x="0" y="0" class="text-medium" font-size="14" font-weight="500">Password</text>
+      <rect class="input" x="0" y="15" width="400" height="48" rx="8"/>
+      <text x="15" y="45" class="text-light" font-size="14">••••••••</text>
+      <text x="355" y="45" class="text-light" font-size="12">Show</text>
+    </g>
+
+    <!-- Sign In Button -->
+    <rect class="primary" x="40" y="420" width="400" height="52" rx="8"/>
+    <text x="240" y="452" class="text-white" font-size="16" font-weight="600" text-anchor="middle">Sign In</text>
+
+    <!-- Footer Links -->
+    <text x="240" y="500" class="text-light" font-size="14" text-anchor="middle">
+      <tspan>Don't have an account?</tspan>
+      <tspan fill="#2563eb" font-weight="600"> Sign up</tspan>
+    </text>
+  </g>
+
+  <!-- Secondary Links -->
+  <g transform="translate(960, 720)">
+    <text x="0" y="0" class="text-light" font-size="13">
+      <tspan>Forgot password?</tspan>
+    </text>
+    <text x="130" y="0" class="text-light" font-size="13">·</text>
+    <text x="150" y="0" class="text-light" font-size="13">Privacy Policy</text>
+    <text x="260" y="0" class="text-light" font-size="13">·</text>
+    <text x="280" y="0" class="text-light" font-size="13">Terms of Service</text>
+  </g>
+
+  <!-- ========== ANNOTATIONS ========== -->
+  <rect class="annotation-box" x="1150" y="320" width="180" height="60" rx="4"/>
+  <text x="1160" y="340" class="annotation" font-size="11">Google OAuth is primary</text>
+  <text x="1160" y="355" class="annotation" font-size="11">Email/password as</text>
+  <text x="1160" y="370" class="annotation" font-size="11">backup option</text>
+
+  <rect class="annotation-box" x="20" y="740" width="200" height="60" rx="4"/>
+  <text x="30" y="760" class="annotation" font-size="11">Left panel shows social</text>
+  <text x="30" y="775" class="annotation" font-size="11">proof and platform value</text>
+  <text x="30" y="790" class="annotation" font-size="11">to increase conversions</text>
+</svg>
