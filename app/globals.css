@@ -1,38 +1,242 @@
 /*
- * T3 Stack Global Styles
+ * AI Saved Me - Global Styles
  *
- * This template uses Tailwind CSS v4 with CSS-first configuration.
- * Theme customization is done via @theme blocks below.
- *
- * If you want to add shadcn/ui components, you'll need to:
- * 1. Run: npx shadcn@latest init
- * 2. Extend the @theme block with additional color tokens
- * 3. Update components.json as needed
+ * Design System: "Victory Dashboard"
+ * - Dark hero sections with glowing accents
+ * - Emerald success/victory color
+ * - Bold, confident typography
+ * - Editorial light sections for content
  */
+
+/* Google Fonts must be imported before tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @import "tailwindcss";
 
 @theme {
-  /* Color tokens using --color-* namespace for Tailwind v4 */
+  /* Typography */
+  --font-family-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+
+  /* Dark theme colors */
+  --color-dark-900: #0f172a;
+  --color-dark-800: #1e293b;
+  --color-dark-700: #334155;
+  --color-dark-600: #475569;
+
+  /* Light theme colors */
+  --color-light-50: #f8fafc;
+  --color-light-100: #f1f5f9;
+  --color-light-200: #e2e8f0;
+  --color-light-300: #cbd5e1;
+  --color-light-400: #94a3b8;
+
+  /* Primary - Blue */
+  --color-primary-500: #2563eb;
+  --color-primary-600: #1d4ed8;
+  --color-primary-400: #3b82f6;
+  --color-primary-100: #dbeafe;
+
+  /* Success/Victory - Emerald */
+  --color-success-500: #10b981;
+  --color-success-400: #34d399;
+  --color-success-600: #059669;
+
+  /* Category colors */
+  --color-legal-bg: #fef3c7;
+  --color-legal-text: #92400e;
+  --color-legal-border: #f59e0b;
+
+  --color-medical-bg: #d1fae5;
+  --color-medical-text: #065f46;
+  --color-medical-border: #10b981;
+
+  /* Semantic colors */
   --color-background: #ffffff;
-  --color-foreground: #171717;
+  --color-foreground: #0f172a;
+  --color-muted: #64748b;
+
+  /* Shadows */
+  --shadow-glow-success: 0 0 30px rgba(16, 185, 129, 0.4);
+  --shadow-glow-primary: 0 0 20px rgba(59, 130, 246, 0.5);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-/* Dark mode using prefers-color-scheme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #0a0a0a;
-    --color-foreground: #ededed;
-  }
+/* Base styles */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  font-family: var(--font-family-display);
   color: var(--color-foreground);
   background: var(--color-background);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom utilities use @utility directive in Tailwind v4 */
+/* Typography utilities */
+@utility font-display {
+  font-family: var(--font-family-display);
+}
+
+@utility font-mono {
+  font-family: var(--font-family-mono);
+}
+
 @utility text-balance {
   text-wrap: balance;
+}
+
+/* Glow effects */
+@utility glow-success {
+  filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6));
+}
+
+@utility glow-primary {
+  filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.5));
+}
+
+@utility text-glow {
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+/* Card styles */
+@utility card-shadow {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+@utility card-shadow-hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Category tag styles */
+.tag-legal {
+  background-color: var(--color-legal-bg);
+  color: var(--color-legal-text);
+}
+
+.tag-medical {
+  background-color: var(--color-medical-bg);
+  color: var(--color-medical-text);
+}
+
+/* Ticker animation */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker-scroll 40s linear infinite;
+}
+
+.animate-ticker-reverse {
+  animation: ticker-scroll 45s linear infinite reverse;
+}
+
+/* Pause animation on hover */
+.ticker-container:hover .animate-ticker,
+.ticker-container:hover .animate-ticker-reverse {
+  animation-play-state: paused;
+}
+
+/* Live pulse animation */
+@keyframes pulse-live {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+.animate-pulse-live {
+  animation: pulse-live 2s ease-in-out infinite;
+}
+
+/* Counter number animation */
+@keyframes count-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-count {
+  animation: count-up 0.8s var(--ease-out) forwards;
+}
+
+/* Staggered fade in */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s var(--ease-out) forwards;
+}
+
+/* Gradient fade for ticker edges */
+.ticker-fade-left {
+  background: linear-gradient(to right, #0f172a, transparent);
+}
+
+.ticker-fade-right {
+  background: linear-gradient(to left, #0f172a, transparent);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-600);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-light-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-light-400);
 }
