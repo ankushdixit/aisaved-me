@@ -69,7 +69,7 @@ export function Hero() {
 
 export function HeroCTA() {
   return (
-    <section className="bg-light-50 pb-16">
+    <section className="bg-light-50 pt-12 pb-16">
       <div className="mx-auto max-w-7xl px-8 lg:px-12">
         <p className="text-sm text-dark-600 font-mono mb-8 tracking-wide">Explore the stories</p>
 

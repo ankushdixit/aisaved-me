@@ -12,22 +12,21 @@ test.describe("Home Page", () => {
   test("should display the hero section", async ({ page }) => {
     await page.goto("/");
 
-    // Check for hero section content - scope to body to exclude title tag
-    await expect(
-      page
-        .locator("body")
-        .getByText(/winning with ai/i)
-        .first()
-    ).toBeVisible();
+    // Check for hero section content - use main element to avoid title tag
+    // Check for the subtitle which is more reliably visible across viewports
+    await expect(page.locator("main").getByText(/watch the victories roll in/i)).toBeVisible();
   });
 
   test("should have no accessibility violations @a11y", async ({ page }) => {
     await page.goto("/");
 
     // Run accessibility scan
-    // Cast page to any to avoid type conflict between @playwright/test and @axe-core/playwright
+    // Cast page to avoid type conflict between @playwright/test and @axe-core/playwright
     // Disable color-contrast check due to intentional design choices in theme colors
-    const accessibilityScanResults = await new AxeBuilder({ page } as any)
+    const accessibilityScanResults = await new AxeBuilder({
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      page: page as any,
+    })
       .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
       .disableRules(["color-contrast"])
       .analyze();

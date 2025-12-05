@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Story listing page at `/stories` route with filter sidebar and pagination
+- FilterSidebar component with Category, AI Tool, and Outcome Type filter groups
+- FilterChip component for active filter display with remove functionality
+- StoryCardHorizontal component for story grid display
+- StoryGrid component for arranging story cards
+- Pagination component with theme-aware styling
+- Story type definitions in `lib/types/story.ts`
+- Extended mock story data with 15 stories across all categories
+- Filter and pagination helper functions for client-side filtering
+- URL query parameter support for shareable filtered views
+- Unit tests for FilterChip, FilterSidebar, StoryCardHorizontal, and Pagination components
 - Initial project setup with Session-Driven Development
 - Complete landing page with all sections (Hero, VictoryTicker, FeaturedStory, CategoryCards, Features, HowItWorks, Testimonials, FinalCTA)
 - Three-theme system with Memphis (default), Japanese/Zen, and Organic themes
