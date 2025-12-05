@@ -16,7 +16,10 @@
     "components/landing/organic/**",
     "components/ui/memphis/**",
     "components/ui/japanese/**",
-    "components/ui/organic/**"
+    "components/ui/organic/**",
+    "components/stories/memphis/**",
+    "components/stories/japanese/**",
+    "components/stories/organic/**"
   ],
   "format": ["typescript", "javascript", "tsx", "jsx"],
   "minLines": 5,

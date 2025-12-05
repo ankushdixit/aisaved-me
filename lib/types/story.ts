@@ -57,3 +57,48 @@ export interface PaginationInfo {
   startIndex: number;
   endIndex: number;
 }
+
+// Types for Story Detail Page
+
+export interface ChatMessage {
+  id: string;
+  role: "user" | "ai";
+  content: string;
+}
+
+export interface ChatEmbed {
+  storyId: string;
+  aiTool: AiTool;
+  aiToolLabel: string;
+  messages: ChatMessage[];
+}
+
+export interface StoryArtifact {
+  id: string;
+  type: "image" | "document" | "screenshot";
+  title: string;
+  caption: string;
+  alt: string;
+}
+
+export interface StoryContent {
+  intro: string;
+  theProblem: string;
+  theStrategy: string;
+  quote?: {
+    text: string;
+    attribution: string;
+  };
+  theResult: string;
+  keyTakeaways: string[];
+  artifacts?: StoryArtifact[];
+}
+
+export interface StoryDetail extends Story {
+  subtitle?: string;
+  publishedDate: string;
+  content: StoryContent;
+  chatEmbed?: ChatEmbed;
+  likes: number;
+  comments: number;
+}

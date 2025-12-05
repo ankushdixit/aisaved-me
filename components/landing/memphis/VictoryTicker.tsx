@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   tickerStoriesRow1,
   tickerStoriesRow2,
@@ -31,9 +32,9 @@ function CategoryTag({ category }: { category: TickerCategory }) {
   );
 }
 
-function TickerCard({ story }: { story: TickerStory }) {
+function TickerCardContent({ story }: { story: TickerStory }) {
   return (
-    <div className="flex-shrink-0 w-[320px] bg-white border-3 border-black shadow-memphis-md p-4 hover:shadow-memphis-lg transition-all cursor-pointer group transform hover:-rotate-1">
+    <>
       <CategoryTag category={story.category} />
 
       <div className="mt-3">
@@ -56,6 +57,25 @@ function TickerCard({ story }: { story: TickerStory }) {
       <p className="mt-3 text-xs font-body text-gray-600">
         {story.author} - {story.timeAgo}
       </p>
+    </>
+  );
+}
+
+function TickerCard({ story }: { story: TickerStory }) {
+  const cardClasses =
+    "flex-shrink-0 w-[320px] bg-white border-3 border-black shadow-memphis-md p-4 hover:shadow-memphis-lg transition-all cursor-pointer group transform hover:-rotate-1";
+
+  if (story.slug) {
+    return (
+      <Link href={`/stories/${story.slug}`} className={`block ${cardClasses}`}>
+        <TickerCardContent story={story} />
+      </Link>
+    );
+  }
+
+  return (
+    <div className={cardClasses}>
+      <TickerCardContent story={story} />
     </div>
   );
 }
