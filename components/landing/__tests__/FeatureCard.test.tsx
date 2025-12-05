@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
-import { Features } from "../FeatureCard";
+import { render, screen } from "@/lib/test-utils";
+import { Features } from "../memphis/FeatureCard";
 
 describe("Features Component", () => {
   it("renders without errors", () => {

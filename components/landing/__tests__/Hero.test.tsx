@@ -1,5 +1,5 @@
-import { render, screen, act } from "@testing-library/react";
-import { Hero, HeroCTA } from "../Hero";
+import { render, screen, act } from "@/lib/test-utils";
+import { Hero, HeroCTA } from "../memphis/Hero";
 
 // Mock Next.js Link component
 jest.mock("next/link", () => {

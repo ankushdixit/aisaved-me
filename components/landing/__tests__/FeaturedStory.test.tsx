@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
-import { FeaturedStory } from "../FeaturedStory";
+import { render, screen } from "@/lib/test-utils";
+import { FeaturedStory } from "../memphis/FeaturedStory";
 
 // Mock Next.js Link component
 jest.mock("next/link", () => {
@@ -35,13 +35,17 @@ describe("FeaturedStory Component", () => {
 
   it("renders the story excerpt", () => {
     render(<FeaturedStory />);
-    expect(screen.getByText(/Using Claude, I built a systematic legal defense/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Using Claude, I built a systematic legal defense/)
+    ).toBeInTheDocument();
   });
 
   it("renders the AI quote section", () => {
     render(<FeaturedStory />);
     expect(screen.getByText("From the AI chat:")).toBeInTheDocument();
-    expect(screen.getByText(/Based on your evidence, Enterprise has no legal basis/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Based on your evidence, Enterprise has no legal basis/)
+    ).toBeInTheDocument();
   });
 
   it("renders the author name", () => {

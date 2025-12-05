@@ -126,8 +126,7 @@ export const featuredStory: FeaturedStory = {
   title: "How I Beat Enterprise's $3,200 Damage Claim",
   excerpt:
     "Using Claude, I built a systematic legal defense that made them drop the claim entirely within one week.",
-  aiQuote:
-    "Based on your evidence, Enterprise has no legal basis for this claim...",
+  aiQuote: "Based on your evidence, Enterprise has no legal basis for this claim...",
   author: "Ankush D.",
   readTime: "5 min read",
   amountSaved: 3200,

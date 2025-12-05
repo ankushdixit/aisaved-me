@@ -1,5 +1,5 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import { Navbar } from "../Navbar";
+import { render, screen, fireEvent } from "@/lib/test-utils";
+import { Navbar } from "../memphis/Navbar";
 
 // Mock Next.js Link component
 jest.mock("next/link", () => {

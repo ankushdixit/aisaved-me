@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
-import { Testimonials } from "../Testimonials";
+import { render, screen } from "@/lib/test-utils";
+import { Testimonials } from "../memphis/Testimonials";
 
 describe("Testimonials Component", () => {
   it("renders without errors", () => {

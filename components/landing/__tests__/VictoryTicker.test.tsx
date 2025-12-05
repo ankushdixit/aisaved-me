@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
-import { VictoryTicker } from "../VictoryTicker";
+import { render, screen } from "@/lib/test-utils";
+import { VictoryTicker } from "../memphis/VictoryTicker";
 
 describe("VictoryTicker Component", () => {
   it("renders without errors", () => {
@@ -17,7 +17,9 @@ describe("VictoryTicker Component", () => {
   it("renders ticker stories from row 2", () => {
     render(<VictoryTicker />);
     // Check for first story from row 2
-    expect(screen.getAllByText("Contractor paid after small claims prep").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Contractor paid after small claims prep").length).toBeGreaterThan(
+      0
+    );
     expect(screen.getAllByText("$5,500").length).toBeGreaterThan(0);
   });
 

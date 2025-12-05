@@ -97,14 +97,12 @@ export const howItWorksSteps: HowItWorksStep[] = [
     id: "step-3",
     number: 3,
     title: "We Protect Privacy",
-    description:
-      "Our AI automatically redacts sensitive info before publishing.",
+    description: "Our AI automatically redacts sensitive info before publishing.",
   },
   {
     id: "step-4",
     number: 4,
     title: "Inspire Others",
-    description:
-      "Your story helps someone else facing the same challenge win too.",
+    description: "Your story helps someone else facing the same challenge win too.",
   },
 ];

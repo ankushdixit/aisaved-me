@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/lib/test-utils";
 import Home from "../page";
 
 // Mock Next.js Link component

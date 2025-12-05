@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
-import { CategoryCards } from "../CategoryCard";
+import { render, screen } from "@/lib/test-utils";
+import { CategoryCards } from "../memphis/CategoryCard";
 
 // Mock Next.js Link component
 jest.mock("next/link", () => {
