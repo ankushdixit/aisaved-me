@@ -12,8 +12,8 @@ test.describe("Home Page", () => {
   test("should display the hero section", async ({ page }) => {
     await page.goto("/");
 
-    // Check for hero section content - use first() to avoid matching title tag
-    await expect(page.getByText(/winning with ai/i).first()).toBeVisible();
+    // Check for hero section content - scope to body to exclude title tag
+    await expect(page.locator("body").getByText(/winning with ai/i).first()).toBeVisible();
   });
 
   test("should have no accessibility violations @a11y", async ({ page }) => {
@@ -34,8 +34,8 @@ test.describe("Home Page", () => {
   test("should show the navigation bar", async ({ page }) => {
     await page.goto("/");
 
-    // Check that navbar is visible with key links
-    await expect(page.getByText("AI Saved Me").first()).toBeVisible();
+    // Check that navbar is visible - use role link for the logo
+    await expect(page.getByRole("link", { name: /ai saved me/i }).first()).toBeVisible();
   });
 
   test("should show Browse Stories button", async ({ page }) => {
