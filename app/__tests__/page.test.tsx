@@ -15,7 +15,9 @@ describe("Home Page", () => {
 
   it("renders the main heading", () => {
     render(<Home />);
-    expect(screen.getByText(/Real people winning with AI/i)).toBeInTheDocument();
+    // Text is split across elements, so check for both parts
+    expect(screen.getByText("Real people")).toBeInTheDocument();
+    expect(screen.getByText("winning with AI.")).toBeInTheDocument();
   });
 
   it("displays the victory counter section", () => {
@@ -25,7 +27,7 @@ describe("Home Page", () => {
 
   it("shows the LIVE indicator", () => {
     render(<Home />);
-    expect(screen.getByText("LIVE")).toBeInTheDocument();
+    expect(screen.getByText("Live")).toBeInTheDocument();
   });
 
   it("renders the Featured Story section", () => {

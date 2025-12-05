@@ -51,7 +51,7 @@ describe("Footer Component", () => {
 
   it("renders newsletter section", () => {
     render(<Footer />);
-    expect(screen.getByText("STAY UPDATED")).toBeInTheDocument();
+    expect(screen.getByText("Stay Updated")).toBeInTheDocument();
     expect(screen.getByText("Get weekly wins in your inbox")).toBeInTheDocument();
     expect(screen.getByPlaceholderText("you@email.com")).toBeInTheDocument();
     expect(screen.getByText("Subscribe")).toBeInTheDocument();

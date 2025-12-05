@@ -49,7 +49,8 @@ describe("Testimonials Component", () => {
 
   it("renders three testimonial cards", () => {
     const { container } = render(<Testimonials />);
-    const quotes = container.querySelectorAll(".bg-light-50.rounded-xl");
-    expect(quotes.length).toBe(3);
+    // Look for the card wrapper divs that have border-4 and shadow-memphis-md classes
+    const cards = container.querySelectorAll(".border-4.shadow-memphis-md");
+    expect(cards.length).toBe(3);
   });
 });

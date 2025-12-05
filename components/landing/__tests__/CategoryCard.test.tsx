@@ -38,7 +38,7 @@ describe("CategoryCards Component", () => {
 
   it("renders Explore links", () => {
     render(<CategoryCards />);
-    const exploreLinks = screen.getAllByText("Explore");
+    const exploreLinks = screen.getAllByText("Explore →");
     expect(exploreLinks.length).toBe(2);
   });
 

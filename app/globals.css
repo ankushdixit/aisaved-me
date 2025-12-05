@@ -1,72 +1,64 @@
 /*
  * AI Saved Me - Global Styles
  *
- * Design System: "Victory Dashboard"
- * - Dark hero sections with glowing accents
- * - Emerald success/victory color
- * - Bold, confident typography
- * - Editorial light sections for content
+ * Design System: "NEO-MEMPHIS / 80s REVIVAL"
+ * - Bold clashing colors with geometric patterns
+ * - Playful, energetic, asymmetric layouts
+ * - Hard shadows, thick outlines
+ * - Memphis Group meets modern web design
  */
 
-/* Google Fonts must be imported before tailwind */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+/* Google Fonts - Bold geometric fonts for Memphis style */
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Righteous&family=Space+Grotesk:wght@400;500;600;700;800&display=swap");
 
 @import "tailwindcss";
 
 @theme {
-  /* Typography */
-  --font-family-display: 'Plus Jakarta Sans', system-ui, sans-serif;
-  --font-family-mono: 'JetBrains Mono', monospace;
+  /* Typography - Bold and geometric */
+  --font-family-display: "Righteous", "Archivo Black", system-ui, sans-serif;
+  --font-family-body: "Space Grotesk", system-ui, sans-serif;
 
-  /* Dark theme colors */
-  --color-dark-900: #0f172a;
-  --color-dark-800: #1e293b;
-  --color-dark-700: #334155;
-  --color-dark-600: #475569;
+  /* NEO-MEMPHIS COLOR PALETTE - Bold and clashing */
+  --color-electric-blue: #0066ff;
+  --color-hot-pink: #ff1493;
+  --color-bright-yellow: #ffd700;
+  --color-mint-green: #00ff7f;
+  --color-coral: #ff6b6b;
+  --color-purple: #9333ea;
+  --color-orange: #ff8c00;
+  --color-cyan: #00d4ff;
 
-  /* Light theme colors */
-  --color-light-50: #f8fafc;
-  --color-light-100: #f1f5f9;
-  --color-light-200: #e2e8f0;
-  --color-light-300: #cbd5e1;
-  --color-light-400: #94a3b8;
+  /* Backgrounds */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #fff9e6;
+  --color-bg-dark: #000000;
 
-  /* Primary - Blue */
-  --color-primary-500: #2563eb;
-  --color-primary-600: #1d4ed8;
-  --color-primary-400: #3b82f6;
-  --color-primary-100: #dbeafe;
+  /* Text */
+  --color-text-primary: #000000;
+  --color-text-secondary: #333333;
+  --color-text-white: #ffffff;
 
-  /* Success/Victory - Emerald */
-  --color-success-500: #10b981;
-  --color-success-400: #34d399;
-  --color-success-600: #059669;
+  /* Memphis Pattern Colors */
+  --color-pattern-1: #0066ff;
+  --color-pattern-2: #ff1493;
+  --color-pattern-3: #ffd700;
+  --color-pattern-4: #00ff7f;
 
-  /* Category colors */
-  --color-legal-bg: #fef3c7;
-  --color-legal-text: #92400e;
-  --color-legal-border: #f59e0b;
-
-  --color-medical-bg: #d1fae5;
-  --color-medical-text: #065f46;
-  --color-medical-border: #10b981;
-
-  /* Semantic colors */
-  --color-background: #ffffff;
-  --color-foreground: #0f172a;
-  --color-muted: #64748b;
-
-  /* Shadows */
-  --shadow-glow-success: 0 0 30px rgba(16, 185, 129, 0.4);
-  --shadow-glow-primary: 0 0 20px rgba(59, 130, 246, 0.5);
-  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+  /* Shadows - HARD not soft */
+  --shadow-memphis-sm: 4px 4px 0px #000000;
+  --shadow-memphis-md: 6px 6px 0px #000000;
+  --shadow-memphis-lg: 8px 8px 0px #000000;
+  --shadow-memphis-xl: 12px 12px 0px #000000;
+  --shadow-memphis-colored-blue: 8px 8px 0px #0066ff;
+  --shadow-memphis-colored-pink: 8px 8px 0px #ff1493;
+  --shadow-memphis-colored-yellow: 8px 8px 0px #ffd700;
+  --shadow-memphis-colored-mint: 8px 8px 0px #00ff7f;
 
   /* Animation */
   --duration-fast: 150ms;
   --duration-normal: 300ms;
   --duration-slow: 500ms;
-  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
@@ -76,9 +68,9 @@ html {
 }
 
 body {
-  font-family: var(--font-family-display);
-  color: var(--color-foreground);
-  background: var(--color-background);
+  font-family: var(--font-family-body);
+  color: var(--color-text-primary);
+  background: var(--color-bg-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -88,45 +80,174 @@ body {
   font-family: var(--font-family-display);
 }
 
-@utility font-mono {
-  font-family: var(--font-family-mono);
+@utility font-body {
+  font-family: var(--font-family-body);
 }
 
-@utility text-balance {
-  text-wrap: balance;
+/* Memphis Pattern Backgrounds */
+.bg-pattern-dots {
+  background-color: #fff9e6;
+  background-image: radial-gradient(#000000 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
 }
 
-/* Glow effects */
-@utility glow-success {
-  filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.6));
+.bg-pattern-diagonal {
+  background-color: #ffffff;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #000000 0,
+    #000000 2px,
+    transparent 0,
+    transparent 12px
+  );
 }
 
-@utility glow-primary {
-  filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.5));
+.bg-pattern-zigzag {
+  background-color: #fff9e6;
+  background-image: repeating-linear-gradient(
+    135deg,
+    #0066ff 0px,
+    #0066ff 10px,
+    transparent 10px,
+    transparent 20px,
+    #ff1493 20px,
+    #ff1493 30px,
+    transparent 30px,
+    transparent 40px
+  );
 }
 
-@utility text-glow {
-  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+.bg-pattern-squiggles {
+  background-color: #ffffff;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 35px,
+      rgba(0, 102, 255, 0.1) 35px,
+      rgba(0, 102, 255, 0.1) 70px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 35px,
+      rgba(255, 20, 147, 0.1) 35px,
+      rgba(255, 20, 147, 0.1) 70px
+    );
 }
 
-/* Card styles */
-@utility card-shadow {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+/* Memphis Shapes - Decorative floating elements */
+.shape-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #000000;
 }
 
-@utility card-shadow-hover {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+.shape-triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
 }
 
-/* Category tag styles */
+.shape-square {
+  position: absolute;
+  border: 3px solid #000000;
+}
+
+/* Memphis Shadow Utilities */
+@utility shadow-memphis-sm {
+  box-shadow: 4px 4px 0px #000000;
+}
+
+@utility shadow-memphis-md {
+  box-shadow: 6px 6px 0px #000000;
+}
+
+@utility shadow-memphis-lg {
+  box-shadow: 8px 8px 0px #000000;
+}
+
+@utility shadow-memphis-xl {
+  box-shadow: 12px 12px 0px #000000;
+}
+
+@utility shadow-memphis-blue {
+  box-shadow: 8px 8px 0px #0066ff;
+}
+
+@utility shadow-memphis-pink {
+  box-shadow: 8px 8px 0px #ff1493;
+}
+
+@utility shadow-memphis-yellow {
+  box-shadow: 8px 8px 0px #ffd700;
+}
+
+@utility shadow-memphis-mint {
+  box-shadow: 8px 8px 0px #00ff7f;
+}
+
+/* Chunky Button Styles */
+.btn-memphis {
+  border: 3px solid #000000;
+  font-family: var(--font-family-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 6px 6px 0px #000000;
+  transition: all 0.15s ease;
+  transform: rotate(-1deg);
+}
+
+.btn-memphis:hover {
+  transform: rotate(0deg) translate(2px, 2px);
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.btn-memphis:active {
+  transform: rotate(0deg) translate(6px, 6px);
+  box-shadow: 0px 0px 0px #000000;
+}
+
+/* Rotated card effect */
+.card-tilted-left {
+  transform: rotate(-1.5deg);
+}
+
+.card-tilted-right {
+  transform: rotate(1.5deg);
+}
+
+/* Bold outline utility */
+@utility outline-bold {
+  outline: 3px solid #000000;
+  outline-offset: -3px;
+}
+
+/* Category tag styles - Memphis version */
 .tag-legal {
-  background-color: var(--color-legal-bg);
-  color: var(--color-legal-text);
+  background-color: #ffd700;
+  color: #000000;
+  border: 3px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  transform: rotate(-2deg);
 }
 
 .tag-medical {
-  background-color: var(--color-medical-bg);
-  color: var(--color-medical-text);
+  background-color: #00ff7f;
+  color: #000000;
+  border: 3px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  transform: rotate(2deg);
+}
+
+.tag-financial {
+  background-color: #ff1493;
+  color: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  transform: rotate(-2deg);
 }
 
 /* Ticker animation */
@@ -153,90 +274,186 @@ body {
   animation-play-state: paused;
 }
 
-/* Live pulse animation */
-@keyframes pulse-live {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
+/* Bounce animation for interactive elements */
+@keyframes bounce-memphis {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
   }
   50% {
-    opacity: 0.5;
-    transform: scale(1.2);
+    transform: translateY(-10px) rotate(1deg);
   }
 }
 
-.animate-pulse-live {
-  animation: pulse-live 2s ease-in-out infinite;
+.animate-bounce-memphis {
+  animation: bounce-memphis 2s ease-in-out infinite;
+}
+
+/* Pop-in animation */
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(-5deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-1deg);
+  }
+}
+
+.animate-pop-in {
+  animation: pop-in 0.6s var(--ease-bounce) forwards;
 }
 
 /* Counter number animation */
 @keyframes count-up {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(20px) scale(0.8);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
 .animate-count {
-  animation: count-up 0.8s var(--ease-out) forwards;
+  animation: count-up 0.8s var(--ease-bounce) forwards;
 }
 
-/* Staggered fade in */
-@keyframes fade-in-up {
-  from {
+/* Wiggle animation for emphasis */
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-1deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+.animate-wiggle {
+  animation: wiggle 0.3s ease-in-out;
+}
+
+/* Confetti-like decorative elements */
+@keyframes float-confetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
     opacity: 0;
-    transform: translateY(20px);
   }
-  to {
+  10% {
     opacity: 1;
-    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
   }
 }
 
-.animate-fade-in-up {
-  animation: fade-in-up 0.6s var(--ease-out) forwards;
+.confetti-piece {
+  position: absolute;
+  animation: float-confetti 8s linear infinite;
 }
 
-/* Gradient fade for ticker edges */
-.ticker-fade-left {
-  background: linear-gradient(to right, #0f172a, transparent);
-}
-
-.ticker-fade-right {
-  background: linear-gradient(to left, #0f172a, transparent);
-}
-
-/* Focus styles */
+/* Focus styles - Bold Memphis style */
 :focus-visible {
-  outline: 2px solid var(--color-primary-500);
-  outline-offset: 2px;
+  outline: 4px solid #ff1493;
+  outline-offset: 4px;
 }
 
-/* Selection */
+/* Selection - Bold colors */
 ::selection {
-  background-color: var(--color-primary-100);
-  color: var(--color-primary-600);
+  background-color: #ffd700;
+  color: #000000;
 }
 
-/* Scrollbar styling */
+/* Scrollbar styling - Chunky and bold */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 14px;
+  height: 14px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-light-100);
+  background: #fff9e6;
+  border: 2px solid #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-light-300);
-  border-radius: 4px;
+  background: #0066ff;
+  border: 2px solid #000000;
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-light-400);
+  background: #ff1493;
+}
+
+/* Wavy divider */
+.divider-wavy {
+  position: relative;
+  height: 40px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.divider-wavy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 40px,
+    #000000 40px,
+    #000000 42px
+  );
+  transform: rotate(-2deg);
+}
+
+/* Dot pattern divider */
+.divider-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 0;
+}
+
+.divider-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+}
+
+/* Text effects */
+.text-memphis-outline {
+  color: transparent;
+  -webkit-text-stroke: 3px #000000;
+  text-stroke: 3px #000000;
+}
+
+.text-memphis-shadow {
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+}
+
+/* Gradient text - Memphis colors */
+.text-memphis-gradient {
+  background: linear-gradient(135deg, #0066ff 0%, #ff1493 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

@@ -58,13 +58,10 @@ function NewsletterForm() {
         placeholder="you@email.com"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="px-4 py-2.5 bg-dark-800 border border-dark-700 rounded-lg text-sm text-white placeholder:text-light-400 focus:outline-none focus:border-primary-500 w-64"
+        className="px-5 py-3 bg-white border-3 border-black text-base text-black placeholder:text-gray-400 focus:outline-none focus:border-[#FF1493] w-64 font-body"
         aria-label="Email for newsletter"
       />
-      <button
-        type="submit"
-        className="px-6 py-2.5 bg-primary-500 text-white text-sm font-medium rounded-lg hover:bg-primary-600 transition-colors"
-      >
+      <button type="submit" className="btn-memphis px-8 py-3 bg-[#0066FF] text-white text-base">
         Subscribe
       </button>
     </form>
@@ -73,50 +70,63 @@ function NewsletterForm() {
 
 export function Footer() {
   return (
-    <footer className="bg-dark-900 text-light-400">
+    <footer className="bg-[#FFF9E6] text-black border-t-4 border-black relative overflow-hidden">
+      {/* Memphis decorative shapes */}
+      <div className="absolute top-10 right-10 w-16 h-16 bg-[#FF1493] rounded-full border-3 border-black opacity-30" />
+      <div className="absolute bottom-20 left-20 w-12 h-12 bg-[#00FF7F] border-3 border-black transform rotate-45 opacity-30" />
+      <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-[#FFD700] border-3 border-black opacity-20" />
+
       {/* Main Footer Content */}
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="text-2xl font-bold text-white">
-              AI Saved Me
-            </Link>
-            <p className="mt-4 text-sm leading-relaxed">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-12 h-12 bg-[#0066FF] border-3 border-black rounded-full transform -rotate-12" />
+              <Link href="/" className="text-2xl font-display font-bold text-black">
+                AI Saved Me
+              </Link>
+            </div>
+            <p className="text-base font-body font-bold leading-relaxed">
               Real people sharing real AI wins.
               <br />
               Verified stories. Actionable prompts.
             </p>
 
-            {/* Social Icons */}
+            {/* Social Icons - Memphis Style */}
             <div className="flex gap-3 mt-6">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center bg-dark-700 rounded-full text-xs text-light-400 hover:bg-dark-600 hover:text-white transition-colors"
-                  aria-label={social.label}
-                >
-                  {social.icon}
-                </a>
-              ))}
+              {socialLinks.map((social, idx) => {
+                const colors = ["#0066FF", "#FF1493", "#00FF7F"];
+                const rotations = ["-rotate-2", "rotate-2", "-rotate-3"];
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-12 h-12 flex items-center justify-center border-3 border-black text-sm font-display font-bold hover:scale-110 transition-transform ${rotations[idx]}`}
+                    style={{ backgroundColor: colors[idx] }}
+                    aria-label={social.label}
+                  >
+                    {social.icon}
+                  </a>
+                );
+              })}
             </div>
           </div>
 
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([key, section]) => (
             <div key={key}>
-              <h3 className="text-sm font-semibold text-white tracking-wider">
+              <h3 className="text-sm font-display font-bold text-black tracking-wider mb-4">
                 {section.title}
               </h3>
-              <ul className="mt-4 space-y-3">
+              <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm hover:text-white transition-colors"
+                      className="text-sm font-body hover:text-[#0066FF] hover:underline transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -128,23 +138,34 @@ export function Footer() {
         </div>
 
         {/* Newsletter Section */}
-        <div className="mt-12 pt-8 border-t border-dark-700">
+        <div className="mt-12 pt-8 border-t-3 border-black">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
-              <h3 className="text-sm font-semibold text-white">STAY UPDATED</h3>
-              <p className="mt-1 text-sm">Get weekly wins in your inbox</p>
+              <h3 className="text-base font-display font-bold text-black uppercase tracking-wider">
+                Stay Updated
+              </h3>
+              <p className="mt-2 text-base font-body font-bold">Get weekly wins in your inbox</p>
             </div>
             <NewsletterForm />
           </div>
         </div>
       </div>
 
+      {/* Divider - Dot pattern */}
+      <div className="divider-dots border-t-3 border-black bg-white">
+        <span className="bg-[#0066FF]" />
+        <span className="bg-[#FF1493]" />
+        <span className="bg-[#FFD700]" />
+        <span className="bg-[#00FF7F]" />
+        <span className="bg-[#FF6B6B]" />
+      </div>
+
       {/* Bottom Bar */}
-      <div className="border-t border-dark-700">
+      <div className="bg-black text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-light-400">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm font-body font-bold">
             <p>&copy; {new Date().getFullYear()} AI Saved Me. All rights reserved.</p>
-            <p className="text-center">aisaved.me</p>
+            <p className="text-center font-display text-[#FFD700]">aisaved.me</p>
             <p>Made with AI (of course)</p>
           </div>
         </div>

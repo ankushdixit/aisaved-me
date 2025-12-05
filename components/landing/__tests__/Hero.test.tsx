@@ -23,7 +23,8 @@ describe("Hero Component", () => {
 
   it("renders the main headline", () => {
     render(<Hero />);
-    expect(screen.getByText("Real people winning with AI.")).toBeInTheDocument();
+    expect(screen.getByText("Real people")).toBeInTheDocument();
+    expect(screen.getByText("winning with AI.")).toBeInTheDocument();
   });
 
   it("renders the subheadline", () => {
@@ -38,7 +39,7 @@ describe("Hero Component", () => {
 
   it("renders the LIVE indicator", () => {
     render(<Hero />);
-    expect(screen.getByText("LIVE")).toBeInTheDocument();
+    expect(screen.getByText("Live")).toBeInTheDocument();
   });
 
   it("animates the counter value", () => {

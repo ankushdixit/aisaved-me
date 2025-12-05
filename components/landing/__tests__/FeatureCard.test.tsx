@@ -13,7 +13,9 @@ describe("Features Component", () => {
 
   it("renders section subtitle", () => {
     render(<Features />);
-    expect(screen.getByText("More than just stories - tools and proof that help you win too")).toBeInTheDocument();
+    expect(
+      screen.getByText("More than just stories - tools and proof that help you win too")
+    ).toBeInTheDocument();
   });
 
   it("renders Make It Your Own feature", () => {
@@ -25,7 +27,9 @@ describe("Features Component", () => {
   it("renders Verified Chat Sessions feature", () => {
     render(<Features />);
     expect(screen.getByText("Verified Chat Sessions")).toBeInTheDocument();
-    expect(screen.getByText(/Every story includes links to actual AI conversations/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Every story includes links to actual AI conversations/)
+    ).toBeInTheDocument();
   });
 
   it("renders Privacy Protected feature", () => {
@@ -36,7 +40,8 @@ describe("Features Component", () => {
 
   it("renders all three feature cards", () => {
     const { container } = render(<Features />);
-    const cards = container.querySelectorAll(".bg-white.rounded-2xl");
+    // Look for the card wrapper divs that have border-4 and shadow-memphis-lg classes
+    const cards = container.querySelectorAll(".border-4.shadow-memphis-lg");
     expect(cards.length).toBe(3);
   });
 

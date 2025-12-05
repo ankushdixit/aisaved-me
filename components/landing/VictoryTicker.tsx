@@ -8,9 +8,9 @@ import {
 
 function CategoryTag({ category }: { category: StoryCategory }) {
   const styles = {
-    legal: "bg-[#fef3c7] text-[#92400e]",
-    medical: "bg-[#d1fae5] text-[#065f46]",
-    financial: "bg-[#dbeafe] text-[#1e40af]",
+    legal: { bg: "#FFD700", text: "#000000" },
+    medical: { bg: "#00FF7F", text: "#000000" },
+    financial: { bg: "#FF1493", text: "#FFFFFF" },
   };
 
   const labels = {
@@ -19,9 +19,12 @@ function CategoryTag({ category }: { category: StoryCategory }) {
     financial: "Financial",
   };
 
+  const style = styles[category];
+
   return (
     <span
-      className={`inline-block px-3 py-1 text-[10px] font-semibold rounded-full ${styles[category]}`}
+      className="inline-block px-3 py-1 text-xs font-display font-bold border-2 border-black uppercase transform -rotate-2"
+      style={{ backgroundColor: style.bg, color: style.text }}
     >
       {labels[category]}
     </span>
@@ -30,48 +33,40 @@ function CategoryTag({ category }: { category: StoryCategory }) {
 
 function TickerCard({ story }: { story: TickerStory }) {
   return (
-    <div className="flex-shrink-0 w-[320px] bg-dark-800 border border-dark-700 rounded-xl p-4 hover:border-dark-600 transition-colors cursor-pointer group">
+    <div className="flex-shrink-0 w-[320px] bg-white border-3 border-black shadow-memphis-md p-4 hover:shadow-memphis-lg transition-all cursor-pointer group transform hover:-rotate-1">
       <CategoryTag category={story.category} />
 
       <div className="mt-3">
         {story.amount ? (
           <div className="flex items-baseline gap-2">
-            <span className="text-2xl font-bold text-success-500 font-mono">
+            <span className="text-3xl font-display font-bold text-black">
               {formatCurrency(story.amount)}
             </span>
-            <span className="text-sm text-light-200">{story.amountLabel}</span>
+            <span className="text-sm font-body font-bold text-black">{story.amountLabel}</span>
           </div>
         ) : (
-          <p className="text-lg font-bold text-success-500">{story.outcome}</p>
+          <p className="text-xl font-display font-bold text-black">{story.outcome}</p>
         )}
       </div>
 
-      <p className="mt-2 text-[13px] text-light-200 line-clamp-1 group-hover:text-white transition-colors">
+      <p className="mt-2 text-sm font-body text-black line-clamp-1 group-hover:font-bold transition-all">
         {story.title}
       </p>
 
-      <p className="mt-3 text-[11px] text-light-400">
+      <p className="mt-3 text-xs font-body text-gray-600">
         {story.author} - {story.timeAgo}
       </p>
     </div>
   );
 }
 
-function TickerRow({
-  stories,
-  reverse = false,
-}: {
-  stories: TickerStory[];
-  reverse?: boolean;
-}) {
+function TickerRow({ stories, reverse = false }: { stories: TickerStory[]; reverse?: boolean }) {
   // Duplicate stories for seamless loop
   const duplicatedStories = [...stories, ...stories];
 
   return (
     <div className="flex gap-5">
-      <div
-        className={`flex gap-5 ${reverse ? "animate-ticker-reverse" : "animate-ticker"}`}
-      >
+      <div className={`flex gap-5 ${reverse ? "animate-ticker-reverse" : "animate-ticker"}`}>
         {duplicatedStories.map((story, index) => (
           <TickerCard key={`${story.id}-${index}`} story={story} />
         ))}
@@ -82,12 +77,12 @@ function TickerRow({
 
 export function VictoryTicker() {
   return (
-    <section className="bg-dark-900 py-8 overflow-hidden ticker-container">
-      <div className="relative">
-        {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 ticker-fade-left pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 ticker-fade-right pointer-events-none" />
+    <section className="bg-[#FFF9E6] py-12 overflow-hidden ticker-container border-t-4 border-b-4 border-black relative">
+      {/* Memphis decorative dots */}
+      <div className="absolute top-4 left-10 w-8 h-8 bg-[#0066FF] rounded-full border-3 border-black" />
+      <div className="absolute bottom-4 right-20 w-10 h-10 bg-[#FF1493] border-3 border-black transform rotate-45" />
 
+      <div className="relative">
         {/* Row 1 - scrolls left */}
         <div className="mb-5 overflow-hidden">
           <TickerRow stories={tickerStoriesRow1} />
