@@ -13,7 +13,12 @@ test.describe("Home Page", () => {
     await page.goto("/");
 
     // Check for hero section content - scope to body to exclude title tag
-    await expect(page.locator("body").getByText(/winning with ai/i).first()).toBeVisible();
+    await expect(
+      page
+        .locator("body")
+        .getByText(/winning with ai/i)
+        .first()
+    ).toBeVisible();
   });
 
   test("should have no accessibility violations @a11y", async ({ page }) => {
