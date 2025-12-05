@@ -1,38 +1,989 @@
 /*
- * T3 Stack Global Styles
+ * AI Saved Me - Global Styles
  *
- * This template uses Tailwind CSS v4 with CSS-first configuration.
- * Theme customization is done via @theme blocks below.
- *
- * If you want to add shadcn/ui components, you'll need to:
- * 1. Run: npx shadcn@latest init
- * 2. Extend the @theme block with additional color tokens
- * 3. Update components.json as needed
+ * Design System: "NEO-MEMPHIS / 80s REVIVAL"
+ * - Bold clashing colors with geometric patterns
+ * - Playful, energetic, asymmetric layouts
+ * - Hard shadows, thick outlines
+ * - Memphis Group meets modern web design
  */
 
+/* Google Fonts loaded via <link> in layout.tsx for reliability */
 @import "tailwindcss";
 
 @theme {
-  /* Color tokens using --color-* namespace for Tailwind v4 */
+  /* ==========================================================================
+     TYPOGRAPHY - Fonts for all themes
+     ========================================================================== */
+  --font-family-display: "Righteous", "Archivo Black", system-ui, sans-serif;
+  --font-family-body: "Space Grotesk", system-ui, sans-serif;
+  --font-family-mono: "JetBrains Mono", monospace;
+
+  /* ==========================================================================
+     MEMPHIS COLOR PALETTE (Default Theme)
+     ========================================================================== */
+  --color-electric-blue: #0066ff;
+  --color-hot-pink: #ff1493;
+  --color-bright-yellow: #ffd700;
+  --color-mint-green: #00ff7f;
+  --color-coral: #ff6b6b;
+  --color-purple: #9333ea;
+  --color-orange: #ff8c00;
+  --color-cyan: #00d4ff;
+
+  /* Backgrounds */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #fff9e6;
+  --color-bg-dark: #000000;
+
+  /* Text */
+  --color-text-primary: #000000;
+  --color-text-secondary: #333333;
+  --color-text-white: #ffffff;
+
+  /* Memphis Pattern Colors */
+  --color-pattern-1: #0066ff;
+  --color-pattern-2: #ff1493;
+  --color-pattern-3: #ffd700;
+  --color-pattern-4: #00ff7f;
+
+  /* ==========================================================================
+     JAPANESE THEME COLORS (Defined for Tailwind class generation)
+     ========================================================================== */
+  --color-rice-paper: #faf8f5;
+  --color-warm-paper: #f5f2ed;
+  --color-sumi-black: #1a1a1a;
+  --color-warm-gray: #6b6b6b;
+  --color-light-gray: #d4d0c8;
+  --color-hanko-red: #c41e3a;
+  --color-red-muted: #9b1628;
+
+  /* Dark theme colors - for Japanese theme Tailwind classes */
+  --color-dark-900: #1a1a1a;
+  --color-dark-800: #2a2a2a;
+  --color-dark-700: #3a3a3a;
+  --color-dark-600: #6b6b6b;
+
+  /* Light theme colors - for Japanese theme Tailwind classes */
+  --color-light-50: #faf8f5;
+  --color-light-100: #f5f2ed;
+  --color-light-200: #e8e5dd;
+  --color-light-300: #d4d0c8;
+  --color-light-400: #6b6b6b;
+
+  /* Primary colors - for Japanese theme */
+  --color-primary-500: #1a1a1a;
+  --color-primary-600: #000000;
+  --color-primary-400: #2a2a2a;
+  --color-primary-100: #f5f2ed;
+
+  /* Success colors */
+  --color-success-500: #1a1a1a;
+  --color-success-400: #2a2a2a;
+  --color-success-600: #000000;
+
+  /* ==========================================================================
+     ORGANIC THEME COLORS (Defined for Tailwind class generation)
+     ========================================================================== */
+  --color-cream: #fff8f0;
+  --color-cream-dark: #fff0dc;
+  --color-terracotta: #e07a5f;
+  --color-terracotta-dark: #c66b52;
+  --color-terracotta-light: #f29479;
+  --color-sage: #81b29a;
+  --color-sage-dark: #6d9a84;
+  --color-sage-light: #a1c9b5;
+  --color-coral-organic: #f2cc8f;
+  --color-coral-dark: #e8b872;
+  --color-clay: #3d405b;
+  --color-clay-light: #5a5d7a;
+
+  /* ==========================================================================
+     CATEGORY COLORS (For all themes)
+     ========================================================================== */
+  --color-legal-bg: #fef3c7;
+  --color-legal-text: #92400e;
+  --color-legal-border: #f59e0b;
+  --color-medical-bg: #d1fae5;
+  --color-medical-text: #065f46;
+  --color-medical-border: #10b981;
+  --color-financial-bg: #fce4ec;
+  --color-financial-text: #c2185b;
+  --color-financial-border: #e07a5f;
+
+  /* ==========================================================================
+     SEMANTIC COLORS
+     ========================================================================== */
   --color-background: #ffffff;
-  --color-foreground: #171717;
+  --color-foreground: #000000;
+  --color-muted: #6b6b6b;
+
+  /* ==========================================================================
+     SHADOWS
+     ========================================================================== */
+  --shadow-memphis-sm: 4px 4px 0px #000000;
+  --shadow-memphis-md: 6px 6px 0px #000000;
+  --shadow-memphis-lg: 8px 8px 0px #000000;
+  --shadow-memphis-xl: 12px 12px 0px #000000;
+  --shadow-memphis-colored-blue: 8px 8px 0px #0066ff;
+  --shadow-memphis-colored-pink: 8px 8px 0px #ff1493;
+  --shadow-memphis-colored-yellow: 8px 8px 0px #ffd700;
+  --shadow-memphis-colored-mint: 8px 8px 0px #00ff7f;
+  --shadow-soft: 0 4px 20px rgba(61, 64, 91, 0.08);
+  --shadow-soft-hover: 0 8px 30px rgba(61, 64, 91, 0.12);
+  --shadow-blob: 0 10px 40px rgba(129, 178, 154, 0.15);
+  --shadow-glow-success: 0 0 30px rgba(16, 185, 129, 0.4);
+  --shadow-glow-primary: 0 0 20px rgba(59, 130, 246, 0.5);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+
+  /* ==========================================================================
+     ANIMATION
+     ========================================================================== */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-organic: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-soft: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Dark mode using prefers-color-scheme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #0a0a0a;
-    --color-foreground: #ededed;
-  }
+/* Base styles */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--color-foreground);
-  background: var(--color-background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-body);
+  color: var(--color-text-primary);
+  background: var(--color-bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom utilities use @utility directive in Tailwind v4 */
-@utility text-balance {
-  text-wrap: balance;
+/* Typography utilities */
+@utility font-display {
+  font-family: var(--font-family-display);
 }
+
+@utility font-body {
+  font-family: var(--font-family-body);
+}
+
+/* Memphis Pattern Backgrounds */
+.bg-pattern-dots {
+  background-color: #fff9e6;
+  background-image: radial-gradient(#000000 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+.bg-pattern-diagonal {
+  background-color: #ffffff;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #000000 0,
+    #000000 2px,
+    transparent 0,
+    transparent 12px
+  );
+}
+
+.bg-pattern-zigzag {
+  background-color: #fff9e6;
+  background-image: repeating-linear-gradient(
+    135deg,
+    #0066ff 0px,
+    #0066ff 10px,
+    transparent 10px,
+    transparent 20px,
+    #ff1493 20px,
+    #ff1493 30px,
+    transparent 30px,
+    transparent 40px
+  );
+}
+
+.bg-pattern-squiggles {
+  background-color: #ffffff;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 35px,
+      rgba(0, 102, 255, 0.1) 35px,
+      rgba(0, 102, 255, 0.1) 70px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 35px,
+      rgba(255, 20, 147, 0.1) 35px,
+      rgba(255, 20, 147, 0.1) 70px
+    );
+}
+
+/* Memphis Shapes - Decorative floating elements */
+.shape-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #000000;
+}
+
+.shape-triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.shape-square {
+  position: absolute;
+  border: 3px solid #000000;
+}
+
+/* Memphis Shadow Utilities */
+@utility shadow-memphis-sm {
+  box-shadow: 4px 4px 0px #000000;
+}
+
+@utility shadow-memphis-md {
+  box-shadow: 6px 6px 0px #000000;
+}
+
+@utility shadow-memphis-lg {
+  box-shadow: 8px 8px 0px #000000;
+}
+
+@utility shadow-memphis-xl {
+  box-shadow: 12px 12px 0px #000000;
+}
+
+@utility shadow-memphis-blue {
+  box-shadow: 8px 8px 0px #0066ff;
+}
+
+@utility shadow-memphis-pink {
+  box-shadow: 8px 8px 0px #ff1493;
+}
+
+@utility shadow-memphis-yellow {
+  box-shadow: 8px 8px 0px #ffd700;
+}
+
+@utility shadow-memphis-mint {
+  box-shadow: 8px 8px 0px #00ff7f;
+}
+
+/* Chunky Button Styles */
+.btn-memphis {
+  border: 3px solid #000000;
+  font-family: var(--font-family-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 6px 6px 0px #000000;
+  transition: all 0.15s ease;
+  transform: rotate(-1deg);
+}
+
+.btn-memphis:hover {
+  transform: rotate(0deg) translate(2px, 2px);
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.btn-memphis:active {
+  transform: rotate(0deg) translate(6px, 6px);
+  box-shadow: 0px 0px 0px #000000;
+}
+
+/* Rotated card effect */
+.card-tilted-left {
+  transform: rotate(-1.5deg);
+}
+
+.card-tilted-right {
+  transform: rotate(1.5deg);
+}
+
+/* Bold outline utility */
+@utility outline-bold {
+  outline: 3px solid #000000;
+  outline-offset: -3px;
+}
+
+/* Category tag styles - Memphis version */
+.tag-legal {
+  background-color: #ffd700;
+  color: #000000;
+  border: 3px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  transform: rotate(-2deg);
+}
+
+.tag-medical {
+  background-color: #00ff7f;
+  color: #000000;
+  border: 3px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  transform: rotate(2deg);
+}
+
+.tag-financial {
+  background-color: #ff1493;
+  color: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  transform: rotate(-2deg);
+}
+
+/* Ticker animation */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker-scroll 40s linear infinite;
+}
+
+.animate-ticker-reverse {
+  animation: ticker-scroll 45s linear infinite reverse;
+}
+
+/* Pause animation on hover */
+.ticker-container:hover .animate-ticker,
+.ticker-container:hover .animate-ticker-reverse {
+  animation-play-state: paused;
+}
+
+/* Bounce animation for interactive elements */
+@keyframes bounce-memphis {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+.animate-bounce-memphis {
+  animation: bounce-memphis 2s ease-in-out infinite;
+}
+
+/* Pop-in animation */
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(-5deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-1deg);
+  }
+}
+
+.animate-pop-in {
+  animation: pop-in 0.6s var(--ease-bounce) forwards;
+}
+
+/* Counter number animation */
+@keyframes count-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-count {
+  animation: count-up 0.8s var(--ease-bounce) forwards;
+}
+
+/* Wiggle animation for emphasis */
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-1deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+.animate-wiggle {
+  animation: wiggle 0.3s ease-in-out;
+}
+
+/* Organic float animation */
+@keyframes float-organic {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float-organic 4s ease-in-out infinite;
+}
+
+/* Gentle pulse animation for organic theme */
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+/* Confetti-like decorative elements */
+@keyframes float-confetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.confetti-piece {
+  position: absolute;
+  animation: float-confetti 8s linear infinite;
+}
+
+/* Focus styles - Bold Memphis style */
+:focus-visible {
+  outline: 4px solid #ff1493;
+  outline-offset: 4px;
+}
+
+/* Selection - Bold colors */
+::selection {
+  background-color: #ffd700;
+  color: #000000;
+}
+
+/* Scrollbar styling - Chunky and bold */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff9e6;
+  border: 2px solid #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0066ff;
+  border: 2px solid #000000;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff1493;
+}
+
+/* Wavy divider */
+.divider-wavy {
+  position: relative;
+  height: 40px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.divider-wavy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 40px,
+    #000000 40px,
+    #000000 42px
+  );
+  transform: rotate(-2deg);
+}
+
+/* Dot pattern divider */
+.divider-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 0;
+}
+
+.divider-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+}
+
+/* Text effects */
+.text-memphis-outline {
+  color: transparent;
+  -webkit-text-stroke: 3px #000000;
+  text-stroke: 3px #000000;
+}
+
+.text-memphis-shadow {
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+}
+
+/* Gradient text - Memphis colors */
+.text-memphis-gradient {
+  background: linear-gradient(135deg, #0066ff 0%, #ff1493 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   THEME SYSTEM
+
+   Each theme overrides the base Memphis styles.
+   Themes are activated by adding a class to <html>:
+   - .theme-memphis (default)
+   - .theme-japanese
+   - .theme-organic
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   JAPANESE / ZEN THEME
+   - Wabi-sabi aesthetics
+   - Rice paper warmth with sumi ink depth
+   - Red accent used sparingly like hanko stamp
+   -------------------------------------------------------------------------- */
+
+.theme-japanese {
+  /* Typography - Japanese inspired (uses Georgia serif for elegant simplicity) */
+  --font-family-display: Georgia, "Times New Roman", serif;
+  --font-family-body: Georgia, "Times New Roman", serif;
+  --font-family-mono: system-ui, sans-serif;
+
+  /* Japanese Minimal Palette */
+  --color-rice-paper: #faf8f5;
+  --color-warm-paper: #f5f2ed;
+  --color-sumi-black: #1a1a1a;
+  --color-warm-gray: #6b6b6b;
+  --color-light-gray: #d4d0c8;
+  --color-hanko-red: #c41e3a;
+  --color-red-muted: #9b1628;
+
+  /* Dark theme colors - mapped for Tailwind classes */
+  --color-dark-900: #1a1a1a;
+  --color-dark-800: #2a2a2a;
+  --color-dark-700: #3a3a3a;
+  --color-dark-600: #6b6b6b;
+
+  /* Light theme colors - mapped for Tailwind classes */
+  --color-light-50: #faf8f5;
+  --color-light-100: #f5f2ed;
+  --color-light-200: #e8e5dd;
+  --color-light-300: #d4d0c8;
+  --color-light-400: #6b6b6b;
+
+  /* Primary - Minimalist black/red */
+  --color-primary-500: #1a1a1a;
+  --color-primary-600: #000000;
+  --color-primary-400: #2a2a2a;
+  --color-primary-100: #f5f2ed;
+
+  /* Success/Victory - Subtle */
+  --color-success-500: #1a1a1a;
+  --color-success-400: #2a2a2a;
+  --color-success-600: #000000;
+
+  /* Category colors - Muted tones */
+  --color-legal-bg: #f5f2ed;
+  --color-legal-text: #6b6b6b;
+  --color-legal-border: #d4d0c8;
+  --color-medical-bg: #faf8f5;
+  --color-medical-text: #6b6b6b;
+  --color-medical-border: #d4d0c8;
+
+  /* Semantic colors */
+  --color-background: #faf8f5;
+  --color-foreground: #1a1a1a;
+  --color-muted: #6b6b6b;
+
+  /* Shadows - Extremely subtle */
+  --shadow-glow-success: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-glow-primary: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+  /* Animation - Gentle */
+  --duration-fast: 200ms;
+  --duration-normal: 400ms;
+  --duration-slow: 600ms;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.15, 1);
+}
+
+.theme-japanese body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+/* Japanese: Category tag styles */
+.theme-japanese .tag-legal {
+  background-color: #f5f2ed;
+  color: #6b6b6b;
+  border: 1px solid #d4d0c8;
+}
+
+.theme-japanese .tag-medical {
+  background-color: #faf8f5;
+  color: #6b6b6b;
+  border: 1px solid #d4d0c8;
+}
+
+/* Japanese: Ticker fade */
+.theme-japanese .ticker-fade-left {
+  background: linear-gradient(to right, #faf8f5, transparent);
+}
+
+.theme-japanese .ticker-fade-right {
+  background: linear-gradient(to left, #faf8f5, transparent);
+}
+
+/* Japanese: Scrollbar - thinner, minimal */
+.theme-japanese ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.theme-japanese ::-webkit-scrollbar-track {
+  background: #f5f2ed;
+  border: none;
+}
+
+.theme-japanese ::-webkit-scrollbar-thumb {
+  background: #d4d0c8;
+  border-radius: 4px;
+  border: none;
+}
+
+.theme-japanese ::-webkit-scrollbar-thumb:hover {
+  background: #6b6b6b;
+}
+
+/* Japanese: Focus and selection */
+.theme-japanese :focus-visible {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+.theme-japanese ::selection {
+  background-color: #f5f2ed;
+  color: #1a1a1a;
+}
+
+/* --------------------------------------------------------------------------
+   ORGANIC / SOFT THEME
+   - Warm earth tones and natural colors
+   - Rounded, friendly typography
+   - Flowing organic shapes
+   -------------------------------------------------------------------------- */
+
+.theme-organic {
+  /* Typography - Friendly and rounded */
+  --font-family-display: "Quicksand", "Nunito", system-ui, sans-serif;
+  --font-family-body: "Lato", system-ui, sans-serif;
+
+  /* Warm earth tones - Override organic colors */
+  --color-cream: #fff8f0;
+  --color-cream-dark: #fff0dc;
+  --color-terracotta: #e07a5f;
+  --color-terracotta-dark: #c66b52;
+  --color-terracotta-light: #f29479;
+  --color-sage: #81b29a;
+  --color-sage-dark: #6d9a84;
+  --color-sage-light: #a1c9b5;
+  --color-coral-organic: #f2cc8f;
+  --color-coral-dark: #e8b872;
+  --color-clay: #3d405b;
+  --color-clay-light: #5a5d7a;
+
+  /* Semantic colors */
+  --color-background: #fff8f0;
+  --color-foreground: #3d405b;
+  --color-muted: #81b29a;
+
+  /* Category colors - Soft pastels */
+  --color-legal-bg: #fff3e0;
+  --color-legal-text: #8d6e63;
+  --color-legal-border: #f2cc8f;
+  --color-medical-bg: #e8f5e9;
+  --color-medical-text: #558b2f;
+  --color-medical-border: #81b29a;
+  --color-financial-bg: #fce4ec;
+  --color-financial-text: #c2185b;
+  --color-financial-border: #e07a5f;
+
+  /* Soft shadows */
+  --shadow-soft: 0 4px 20px rgba(61, 64, 91, 0.08);
+  --shadow-soft-hover: 0 8px 30px rgba(61, 64, 91, 0.12);
+  --shadow-blob: 0 10px 40px rgba(129, 178, 154, 0.15);
+
+  /* Animation */
+  --duration-fast: 200ms;
+  --duration-normal: 350ms;
+  --duration-slow: 500ms;
+  --ease-organic: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-soft: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.theme-organic body {
+  font-family: "Lato", system-ui, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+/* Organic: Category tag styles */
+.theme-organic .tag-legal {
+  background-color: #fff3e0;
+  color: #8d6e63;
+}
+
+.theme-organic .tag-medical {
+  background-color: #e8f5e9;
+  color: #558b2f;
+}
+
+.theme-organic .tag-financial {
+  background-color: #fce4ec;
+  color: #c2185b;
+}
+
+/* Organic: Ticker fade */
+.theme-organic .ticker-fade-left {
+  background: linear-gradient(to right, #fff8f0, transparent);
+}
+
+.theme-organic .ticker-fade-right {
+  background: linear-gradient(to left, #fff8f0, transparent);
+}
+
+/* Organic: Scrollbar */
+.theme-organic ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.theme-organic ::-webkit-scrollbar-track {
+  background: #fff0dc;
+  border-radius: 10px;
+}
+
+.theme-organic ::-webkit-scrollbar-thumb {
+  background: #81b29a;
+  border-radius: 10px;
+  border: 2px solid #fff8f0;
+}
+
+.theme-organic ::-webkit-scrollbar-thumb:hover {
+  background: #6d9a84;
+}
+
+/* Organic: Focus and selection */
+.theme-organic :focus-visible {
+  outline: 2px solid #e07a5f;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.theme-organic ::selection {
+  background-color: #f2cc8f;
+  color: #3d405b;
+}
+
+/* Organic: Remove tilts */
+.theme-organic .card-tilted-left,
+.theme-organic .card-tilted-right {
+  transform: none;
+}
+
+/* Organic: Warm, rounded tags */
+.theme-organic .tag-legal {
+  border: none;
+  box-shadow: 0 2px 8px rgba(242, 204, 143, 0.3);
+  transform: none;
+  background-color: #fff3e0;
+  color: #8d6e63;
+  border-radius: 20px;
+}
+
+.theme-organic .tag-medical {
+  border: none;
+  box-shadow: 0 2px 8px rgba(129, 178, 154, 0.3);
+  transform: none;
+  background-color: #e8f5e9;
+  color: #558b2f;
+  border-radius: 20px;
+}
+
+.theme-organic .tag-financial {
+  border: none;
+  box-shadow: 0 2px 8px rgba(224, 122, 95, 0.3);
+  transform: none;
+  background-color: #fce4ec;
+  color: #c2185b;
+  border-radius: 20px;
+}
+
+/* Organic: Warm pattern backgrounds */
+.theme-organic .bg-pattern-dots {
+  background-color: #fff8f0;
+  background-image: radial-gradient(#81b29a 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.theme-organic .bg-pattern-diagonal,
+.theme-organic .bg-pattern-zigzag,
+.theme-organic .bg-pattern-squiggles {
+  background-image: none;
+  background-color: #fff8f0;
+}
+
+/* Organic: Rounded scrollbar */
+.theme-organic ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.theme-organic ::-webkit-scrollbar-track {
+  background: #fff0dc;
+  border: none;
+  border-radius: 10px;
+}
+
+.theme-organic ::-webkit-scrollbar-thumb {
+  background: #81b29a;
+  border: 2px solid #fff8f0;
+  border-radius: 10px;
+}
+
+.theme-organic ::-webkit-scrollbar-thumb:hover {
+  background: #6d9a84;
+}
+
+/* Organic: Warm focus and selection */
+.theme-organic :focus-visible {
+  outline: 2px solid #e07a5f;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.theme-organic ::selection {
+  background-color: #f2cc8f;
+  color: #3d405b;
+}
+
+/* Organic: Ticker fade */
+.theme-organic .ticker-fade-left {
+  background: linear-gradient(to right, #fff8f0, transparent);
+}
+
+.theme-organic .ticker-fade-right {
+  background: linear-gradient(to left, #fff8f0, transparent);
+}
+
+/* ==========================================================================
+   JAPANESE THEME UTILITIES
+   ========================================================================== */
+
+/* Hanko stamp effect - red accent */
+.hanko-stamp {
+  background-color: #c41e3a;
+  color: white;
+  border: 1px solid #9b1628;
+}
+
+/* Zen divider */
+.zen-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #d4d0c8, transparent);
+  border: none;
+}
+
+/* ==========================================================================
+   ORGANIC THEME UTILITIES
+   ========================================================================== */
+
+/* Organic soft shadow effects */
+.shadow-soft {
+  box-shadow: 0 4px 20px rgba(61, 64, 91, 0.08);
+}
+
+.shadow-soft-hover {
+  box-shadow: 0 8px 30px rgba(61, 64, 91, 0.12);
+}
+
+.shadow-blob {
+  box-shadow: 0 10px 40px rgba(129, 178, 154, 0.15);
+}
+
+/* Warm glow effects */
+.glow-warm {
+  filter: drop-shadow(0 4px 12px rgba(242, 204, 143, 0.4));
+}
+
+.glow-sage {
+  filter: drop-shadow(0 4px 12px rgba(129, 178, 154, 0.4));
+}
+
+/* Organic blob shapes - SVG backgrounds */
+.blob-bg-1 {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%2381B29A' d='M43.3,-69.7C56.2,-61.8,67.1,-50.1,72.8,-36.2C78.5,-22.3,79,-6.2,75.8,8.7C72.6,23.6,65.7,37.3,55.6,48.2C45.5,59.1,32.2,67.2,17.6,71.8C3,76.4,-13,77.5,-27.4,73.5C-41.8,69.5,-54.6,60.4,-63.8,48.4C-73,36.4,-78.6,21.5,-79.7,6.1C-80.8,-9.3,-77.4,-25.2,-69.3,-38.2C-61.2,-51.2,-48.4,-61.3,-34.4,-68.7C-20.4,-76.1,-5.2,-80.8,9.3,-79.8C23.8,-78.8,30.4,-77.6,43.3,-69.7Z' transform='translate(100 100)' opacity='0.1'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.blob-bg-2 {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23F2CC8F' d='M39.5,-65.3C51.4,-58.2,61.3,-47.5,67.8,-34.8C74.3,-22.1,77.4,-7.4,75.9,6.5C74.4,20.4,68.3,33.5,59.3,44.2C50.3,54.9,38.4,63.2,25.2,67.8C12,72.4,-2.5,73.3,-16.3,70.1C-30.1,66.9,-43.2,59.6,-53.8,49.2C-64.4,38.8,-72.5,25.3,-75.4,10.7C-78.3,-3.9,-76,-19.6,-68.9,-32.5C-61.8,-45.4,-49.9,-55.5,-36.9,-62.1C-23.9,-68.7,-9.9,-71.8,3.2,-77.1C16.3,-82.4,27.6,-72.4,39.5,-65.3Z' transform='translate(100 100)' opacity='0.1'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Theme fonts are loaded in the font import at top of file */

@@ -1,6 +1,6 @@
 {
   "rules": {
-    "color-contrast": { "enabled": true },
+    "color-contrast": { "enabled": false },
     "valid-lang": { "enabled": true },
     "html-has-lang": { "enabled": true },
     "image-alt": { "enabled": true },

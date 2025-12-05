@@ -124,11 +124,19 @@ describe("tRPC API Configuration", () => {
 });
 
 describe("tRPC Client Configuration", () => {
+  const originalConsoleError = console.error;
+
   beforeEach(() => {
+    // Suppress jsdom navigation errors in tests
+    console.error = jest.fn();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     delete (window as any).location;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).location = { origin: "http://localhost:3000" };
+  });
+
+  afterEach(() => {
+    console.error = originalConsoleError;
   });
 
   it("configures httpBatchLink", () => {

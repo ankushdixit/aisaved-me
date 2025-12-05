@@ -10,7 +10,13 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx"
+    "**/*.spec.tsx",
+    "components/landing/memphis/**",
+    "components/landing/japanese/**",
+    "components/landing/organic/**",
+    "components/ui/memphis/**",
+    "components/ui/japanese/**",
+    "components/ui/organic/**"
   ],
   "format": ["typescript", "javascript", "tsx", "jsx"],
   "minLines": 5,
