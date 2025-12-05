@@ -3,10 +3,10 @@ import {
   tickerStoriesRow2,
   formatCurrency,
   type TickerStory,
-  type StoryCategory,
+  type TickerCategory,
 } from "@/lib/mock-data/stories";
 
-function CategoryTag({ category }: { category: StoryCategory }) {
+function CategoryTag({ category }: { category: TickerCategory }) {
   const styles = {
     legal: { bg: "#FFD700", text: "#000000" },
     medical: { bg: "#00FF7F", text: "#000000" },
