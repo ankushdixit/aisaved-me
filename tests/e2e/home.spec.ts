@@ -12,8 +12,8 @@ test.describe("Home Page", () => {
   test("should display the hero section", async ({ page }) => {
     await page.goto("/");
 
-    // Check for hero section content
-    await expect(page.getByText(/winning with ai/i)).toBeVisible();
+    // Check for hero section content - use first() to avoid matching title tag
+    await expect(page.getByText(/winning with ai/i).first()).toBeVisible();
   });
 
   test("should have no accessibility violations @a11y", async ({ page }) => {
