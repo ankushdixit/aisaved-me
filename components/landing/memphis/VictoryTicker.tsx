@@ -104,12 +104,12 @@ export function VictoryTicker() {
 
       <div className="relative">
         {/* Row 1 - scrolls left */}
-        <div className="mb-5 overflow-hidden">
+        <div className="mb-5 overflow-x-hidden overflow-y-visible pt-2 pb-4">
           <TickerRow stories={tickerStoriesRow1} />
         </div>
 
         {/* Row 2 - scrolls right (reverse) */}
-        <div className="overflow-hidden">
+        <div className="overflow-x-hidden overflow-y-visible pt-2 pb-4">
           <TickerRow stories={tickerStoriesRow2} reverse />
         </div>
       </div>

@@ -629,6 +629,7 @@ const storyDetails: Record<string, StoryDetail> = {
         {
           id: "artifact-1-1",
           type: "image",
+          url: "/placeholders/evidence-rental-agreement.jpg",
           title: "Evidence Photo: Rental Agreement Showing Clean Return",
           caption: "The return inspection form with no damage noted - my key evidence",
           alt: "Rental car return inspection document",
@@ -636,9 +637,12 @@ const storyDetails: Record<string, StoryDetail> = {
         {
           id: "artifact-1-2",
           type: "document",
+          url: "/placeholders/response-letter.pdf",
           title: "AI-Generated Response Letter",
           caption: "The formal response letter Claude helped me draft citing legal precedents",
           alt: "Legal response letter document",
+          fileSize: "145 KB",
+          pageCount: 3,
         },
       ],
     },
@@ -689,6 +693,7 @@ const storyDetails: Record<string, StoryDetail> = {
         {
           id: "artifact-2-1",
           type: "image",
+          url: "/placeholders/move-in-photos.jpg",
           title: "Move-In Photos: Pre-Existing Damage Documentation",
           caption: "Photos taken on move-in day showing carpet stains and wall marks",
           alt: "Move-in apartment condition photos",
@@ -696,13 +701,17 @@ const storyDetails: Record<string, StoryDetail> = {
         {
           id: "artifact-2-2",
           type: "document",
+          url: "/placeholders/demand-letter.pdf",
           title: "Demand Letter with Statute Citations",
           caption: "The formal demand letter citing state tenant protection laws",
           alt: "Legal demand letter document",
+          fileSize: "89 KB",
+          pageCount: 2,
         },
         {
           id: "artifact-2-3",
           type: "screenshot",
+          url: "/placeholders/landlord-response.png",
           title: "Landlord's Response Email",
           caption: "Email from landlord agreeing to return the full deposit",
           alt: "Screenshot of landlord email response",

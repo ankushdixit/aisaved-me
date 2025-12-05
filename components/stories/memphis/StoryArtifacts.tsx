@@ -1,4 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import type { StoryArtifact } from "@/lib/types/story";
+import { ArtifactModal } from "./ArtifactModal";
 
 interface StoryArtifactsProps {
   artifacts: StoryArtifact[];
@@ -18,33 +22,52 @@ function ArtifactIcon({ type }: { type: StoryArtifact["type"] }) {
 }
 
 export function StoryArtifacts({ artifacts }: StoryArtifactsProps) {
+  const [selectedArtifact, setSelectedArtifact] = useState<StoryArtifact | null>(null);
+
   if (!artifacts || artifacts.length === 0) return null;
 
   return (
     <div className="mt-10">
       <h3 className="text-xl font-display font-bold text-black mb-4">Evidence & Documents</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
         {artifacts.map((artifact) => (
-          <div
+          <button
             key={artifact.id}
-            className="bg-gray-100 border-3 border-black shadow-memphis-sm overflow-hidden"
+            onClick={() => setSelectedArtifact(artifact)}
+            className="text-left bg-gray-100 border-3 border-black shadow-memphis-sm overflow-hidden hover:shadow-memphis-md hover:-translate-y-1 transition-all cursor-pointer group flex flex-col h-full"
           >
-            {/* Placeholder Image Area */}
-            <div className="h-40 bg-gray-200 flex items-center justify-center border-b-3 border-black">
+            {/* Placeholder Image Area - fixed height */}
+            <div className="h-40 flex-shrink-0 bg-gray-200 flex items-center justify-center border-b-3 border-black group-hover:bg-gray-300 transition-colors">
               <div className="text-center px-4">
                 <ArtifactIcon type={artifact.type} />
                 <p className="text-sm font-body text-gray-600 mt-2">{artifact.alt}</p>
               </div>
             </div>
 
-            {/* Artifact Info */}
-            <div className="p-4">
-              <p className="font-display font-bold text-black text-sm">{artifact.title}</p>
-              <p className="mt-1 text-xs font-body text-gray-600">{artifact.caption}</p>
+            {/* Artifact Info - fixed minimum height */}
+            <div className="p-4 flex-1 flex flex-col min-h-[120px]">
+              <p className="font-display font-bold text-black text-sm group-hover:underline line-clamp-2">
+                {artifact.title}
+              </p>
+              <p className="mt-1 text-xs font-body text-gray-600 line-clamp-2 flex-1">
+                {artifact.caption}
+              </p>
+              <p className="mt-2 text-xs font-display font-bold text-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity">
+                Click to view →
+              </p>
             </div>
-          </div>
+          </button>
         ))}
       </div>
+
+      {/* Artifact Modal */}
+      {selectedArtifact && (
+        <ArtifactModal
+          artifact={selectedArtifact}
+          isOpen={!!selectedArtifact}
+          onClose={() => setSelectedArtifact(null)}
+        />
+      )}
     </div>
   );
 }
