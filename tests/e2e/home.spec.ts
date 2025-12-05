@@ -14,9 +14,7 @@ test.describe("Home Page", () => {
 
     // Check for hero section content - use main element to avoid title tag
     // Check for the subtitle which is more reliably visible across viewports
-    await expect(
-      page.locator("main").getByText(/watch the victories roll in/i)
-    ).toBeVisible();
+    await expect(page.locator("main").getByText(/watch the victories roll in/i)).toBeVisible();
   });
 
   test("should have no accessibility violations @a11y", async ({ page }) => {
