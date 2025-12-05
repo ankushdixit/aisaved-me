@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- ArtifactModal component for viewing artifacts in a themed modal
+  - Memphis theme: Bold borders, Memphis shadows, colored headers (yellow/mint/coral)
+  - Japanese theme: Minimal styling, muted colors, subtle accent line
+  - Organic theme: Rounded corners, gradient headers, soft shadows
+  - Supports images, screenshots, and PDF documents
+  - PDF placeholder with Download and "Open in New Tab" actions
+  - Keyboard support (ESC to close), backdrop click to close
+  - Full accessibility (ARIA attributes, focus management)
+  - 122 new tests across all three themes
+- StoryArtifact type enhancements: `url`, `fileSize`, `pageCount` fields
 - Story detail page at `/stories/[slug]` route with dynamic slug routing
 - StoryHero component displaying title, category tag, author info, publish date, and outcome badge
 - StoryContent component with intro, problem, strategy, quote, result, and key takeaways sections
@@ -50,9 +60,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- StoryArtifacts components: Converted artifact cards to clickable buttons with hover states
+- ArtifactModal refactoring: Extracted sub-components (ModalHeader, ImageContent, DocumentContent, ModalFooter) reducing main function from ~140 to ~45 lines
 - Updated all work item specs to include Theme System Integration section
 - Configured test_execution commands in .session/config.json for sk validate
 
 ### Fixed
+
+- VictoryTicker card cropping: Fixed hover rotation causing edges to be clipped by changing overflow and adding padding
+- Artifact card layout inconsistency: Fixed varying card heights with fixed image area and min-height text area
 
 ### Removed

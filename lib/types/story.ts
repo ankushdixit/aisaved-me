@@ -76,9 +76,12 @@ export interface ChatEmbed {
 export interface StoryArtifact {
   id: string;
   type: "image" | "document" | "screenshot";
+  url: string;
   title: string;
   caption: string;
   alt: string;
+  fileSize?: string;
+  pageCount?: number;
 }
 
 export interface StoryContent {
