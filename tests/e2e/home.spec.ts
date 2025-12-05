@@ -12,12 +12,10 @@ test.describe("Home Page", () => {
   test("should display the hero section", async ({ page }) => {
     await page.goto("/");
 
-    // Check for hero section content - scope to body to exclude title tag
+    // Check for hero section content - use main element to avoid title tag
+    // Check for the subtitle which is more reliably visible across viewports
     await expect(
-      page
-        .locator("body")
-        .getByText(/winning with ai/i)
-        .first()
+      page.locator("main").getByText(/watch the victories roll in/i)
     ).toBeVisible();
   });
 
