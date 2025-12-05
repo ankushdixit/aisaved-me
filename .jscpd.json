@@ -19,7 +19,10 @@
     "components/ui/organic/**",
     "components/stories/memphis/**",
     "components/stories/japanese/**",
-    "components/stories/organic/**"
+    "components/stories/organic/**",
+    "components/auth/memphis/**",
+    "components/auth/japanese/**",
+    "components/auth/organic/**"
   ],
   "format": ["typescript", "javascript", "tsx", "jsx"],
   "minLines": 5,
