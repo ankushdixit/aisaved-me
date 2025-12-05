@@ -30,7 +30,8 @@ const config: Config = {
     "^@/(.*)$": "<rootDir>/$1",
   },
 
-  // ESM transformation for dependencies that need it
+  // Transform ESM modules that Jest doesn't handle by default
+  transformIgnorePatterns: ["node_modules/(?!(next-auth|@auth)/)"],
 
   // Coverage thresholds - enforced during test runs
   coverageThreshold: {
