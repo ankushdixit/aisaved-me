@@ -43,7 +43,9 @@ describe("Features Component", () => {
 
   it("renders section subtitle", () => {
     render(<Features />);
-    expect(screen.getByText("More than just stories - tools and proof that help you win too")).toBeInTheDocument();
+    expect(
+      screen.getByText("More than just stories - tools and proof that help you win too")
+    ).toBeInTheDocument();
   });
 
   it("renders 'Make It Your Own' feature", () => {

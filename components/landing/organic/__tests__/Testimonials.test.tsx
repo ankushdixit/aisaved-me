@@ -43,23 +43,17 @@ describe("Testimonials Component", () => {
 
   it("renders first testimonial quote", () => {
     render(<Testimonials />);
-    expect(
-      screen.getByText(/I was about to hire a lawyer for \$2,000/)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/I was about to hire a lawyer for \$2,000/)).toBeInTheDocument();
   });
 
   it("renders second testimonial quote", () => {
     render(<Testimonials />);
-    expect(
-      screen.getByText(/The 'Make It Your Own' feature is genius/)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/The 'Make It Your Own' feature is genius/)).toBeInTheDocument();
   });
 
   it("renders third testimonial quote", () => {
     render(<Testimonials />);
-    expect(
-      screen.getByText(/I was skeptical about AI for medical stuff/)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/I was skeptical about AI for medical stuff/)).toBeInTheDocument();
   });
 
   it("renders first author name", () => {

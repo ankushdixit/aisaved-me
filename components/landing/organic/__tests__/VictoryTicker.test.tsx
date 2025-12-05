@@ -63,7 +63,9 @@ describe("VictoryTicker Component", () => {
 
   it("renders row 1 medical story title", () => {
     render(<VictoryTicker />);
-    expect(screen.getAllByText("AI identified kidney stones, doctor agreed")[0]).toBeInTheDocument();
+    expect(
+      screen.getAllByText("AI identified kidney stones, doctor agreed")[0]
+    ).toBeInTheDocument();
   });
 
   it("renders row 2 story title", () => {

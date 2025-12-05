@@ -110,11 +110,26 @@ describe("Organic Footer Component", () => {
 
     it("Stories links have correct hrefs", () => {
       render(<Footer />);
-      expect(screen.getByText("Browse All Stories").closest("a")).toHaveAttribute("href", "/stories");
-      expect(screen.getByText("Legal Wins").closest("a")).toHaveAttribute("href", "/stories?category=legal");
-      expect(screen.getByText("Medical Wins").closest("a")).toHaveAttribute("href", "/stories?category=medical");
-      expect(screen.getByText("Featured Stories").closest("a")).toHaveAttribute("href", "/stories?featured=true");
-      expect(screen.getByText("Recent Wins").closest("a")).toHaveAttribute("href", "/stories?sort=recent");
+      expect(screen.getByText("Browse All Stories").closest("a")).toHaveAttribute(
+        "href",
+        "/stories"
+      );
+      expect(screen.getByText("Legal Wins").closest("a")).toHaveAttribute(
+        "href",
+        "/stories?category=legal"
+      );
+      expect(screen.getByText("Medical Wins").closest("a")).toHaveAttribute(
+        "href",
+        "/stories?category=medical"
+      );
+      expect(screen.getByText("Featured Stories").closest("a")).toHaveAttribute(
+        "href",
+        "/stories?featured=true"
+      );
+      expect(screen.getByText("Recent Wins").closest("a")).toHaveAttribute(
+        "href",
+        "/stories?sort=recent"
+      );
     });
   });
 
@@ -135,9 +150,18 @@ describe("Organic Footer Component", () => {
 
     it("Resources links have correct hrefs", () => {
       render(<Footer />);
-      expect(screen.getByText("How It Works").closest("a")).toHaveAttribute("href", "#how-it-works");
-      expect(screen.getByText("Submission Guidelines").closest("a")).toHaveAttribute("href", "/guidelines");
-      expect(screen.getByText("AI Tools Guide").closest("a")).toHaveAttribute("href", "/resources/ai-tools");
+      expect(screen.getByText("How It Works").closest("a")).toHaveAttribute(
+        "href",
+        "#how-it-works"
+      );
+      expect(screen.getByText("Submission Guidelines").closest("a")).toHaveAttribute(
+        "href",
+        "/guidelines"
+      );
+      expect(screen.getByText("AI Tools Guide").closest("a")).toHaveAttribute(
+        "href",
+        "/resources/ai-tools"
+      );
       expect(screen.getByText("FAQ").closest("a")).toHaveAttribute("href", "/faq");
       expect(screen.getByText("Contact Us").closest("a")).toHaveAttribute("href", "/contact");
     });
@@ -162,8 +186,14 @@ describe("Organic Footer Component", () => {
       render(<Footer />);
       expect(screen.getByText("Privacy Policy").closest("a")).toHaveAttribute("href", "/privacy");
       expect(screen.getByText("Terms of Service").closest("a")).toHaveAttribute("href", "/terms");
-      expect(screen.getByText("Medical Disclaimer").closest("a")).toHaveAttribute("href", "/disclaimers#medical");
-      expect(screen.getByText("Legal Disclaimer").closest("a")).toHaveAttribute("href", "/disclaimers#legal");
+      expect(screen.getByText("Medical Disclaimer").closest("a")).toHaveAttribute(
+        "href",
+        "/disclaimers#medical"
+      );
+      expect(screen.getByText("Legal Disclaimer").closest("a")).toHaveAttribute(
+        "href",
+        "/disclaimers#legal"
+      );
       expect(screen.getByText("Cookie Policy").closest("a")).toHaveAttribute("href", "/cookies");
     });
   });
@@ -242,7 +272,9 @@ describe("Organic Footer Component", () => {
     it("renders copyright notice with current year", () => {
       render(<Footer />);
       const currentYear = new Date().getFullYear();
-      expect(screen.getByText(new RegExp(`© ${currentYear} AI Saved Me. All rights reserved`))).toBeInTheDocument();
+      expect(
+        screen.getByText(new RegExp(`© ${currentYear} AI Saved Me. All rights reserved`))
+      ).toBeInTheDocument();
     });
 
     it("renders domain name", () => {

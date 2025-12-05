@@ -43,7 +43,9 @@ describe("HowItWorks Component", () => {
 
   it("renders section subtitle", () => {
     render(<HowItWorks />);
-    expect(screen.getByText("From your win to helping others - in four simple steps")).toBeInTheDocument();
+    expect(
+      screen.getByText("From your win to helping others - in four simple steps")
+    ).toBeInTheDocument();
   });
 
   it("renders step 1 title", () => {
@@ -53,7 +55,9 @@ describe("HowItWorks Component", () => {
 
   it("renders step 1 description", () => {
     render(<HowItWorks />);
-    expect(screen.getByText("Use Claude, ChatGPT, Gemini or any AI to solve your problem.")).toBeInTheDocument();
+    expect(
+      screen.getByText("Use Claude, ChatGPT, Gemini or any AI to solve your problem.")
+    ).toBeInTheDocument();
   });
 
   it("renders step 2 title", () => {
@@ -63,7 +67,9 @@ describe("HowItWorks Component", () => {
 
   it("renders step 2 description", () => {
     render(<HowItWorks />);
-    expect(screen.getByText("Submit your win with a link to your AI chat session as proof.")).toBeInTheDocument();
+    expect(
+      screen.getByText("Submit your win with a link to your AI chat session as proof.")
+    ).toBeInTheDocument();
   });
 
   it("renders step 3 title", () => {
@@ -73,7 +79,9 @@ describe("HowItWorks Component", () => {
 
   it("renders step 3 description", () => {
     render(<HowItWorks />);
-    expect(screen.getByText("Our AI automatically redacts sensitive info before publishing.")).toBeInTheDocument();
+    expect(
+      screen.getByText("Our AI automatically redacts sensitive info before publishing.")
+    ).toBeInTheDocument();
   });
 
   it("renders step 4 title", () => {
@@ -83,7 +91,9 @@ describe("HowItWorks Component", () => {
 
   it("renders step 4 description", () => {
     render(<HowItWorks />);
-    expect(screen.getByText("Your story helps someone else facing the same challenge win too.")).toBeInTheDocument();
+    expect(
+      screen.getByText("Your story helps someone else facing the same challenge win too.")
+    ).toBeInTheDocument();
   });
 
   it("renders all step number badges", () => {

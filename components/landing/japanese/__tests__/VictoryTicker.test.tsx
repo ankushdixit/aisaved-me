@@ -16,9 +16,9 @@ describe("VictoryTicker Component", () => {
 
   it("renders ticker stories from row 2", () => {
     render(<VictoryTicker />);
-    expect(
-      screen.getAllByText("Contractor paid after small claims prep").length
-    ).toBeGreaterThan(0);
+    expect(screen.getAllByText("Contractor paid after small claims prep").length).toBeGreaterThan(
+      0
+    );
     expect(screen.getAllByText("HOA fine overturned with AI research").length).toBeGreaterThan(0);
   });
 

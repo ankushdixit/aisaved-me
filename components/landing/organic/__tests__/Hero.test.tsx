@@ -34,7 +34,9 @@ describe("Hero Component", () => {
 
   it("renders subtitle text", () => {
     render(<Hero />);
-    expect(screen.getByText("Watch the victories roll in, one story at a time")).toBeInTheDocument();
+    expect(
+      screen.getByText("Watch the victories roll in, one story at a time")
+    ).toBeInTheDocument();
   });
 
   it("renders victory counter section header", () => {
