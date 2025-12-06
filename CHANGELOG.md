@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Authentication pages with NextAuth.js v5 integration
+  - Sign-in page at `/auth/signin` with email/password and Google OAuth
+  - Sign-up page at `/auth/signup` with registration form
+  - Error page at `/auth/error` with friendly error messages
+  - Split-screen layout with social proof panel and form
+  - Theme variants (Memphis, Japanese, Organic) for all auth components
+  - AuthLayout, SocialProof, GoogleButton, SignInForm, SignUpForm components
+  - User, Account, Session, VerificationToken models in Prisma schema
+  - Registration API route at `/api/auth/register`
+  - JWT session strategy with Prisma adapter
+  - 28 new unit tests for auth components
+- FormInput and PasswordInput reusable components for Memphis theme
 - ArtifactModal component for viewing artifacts in a themed modal
   - Memphis theme: Bold borders, Memphis shadows, colored headers (yellow/mint/coral)
   - Japanese theme: Minimal styling, muted colors, subtle accent line

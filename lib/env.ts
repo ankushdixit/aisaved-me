@@ -19,6 +19,11 @@ const envSchema = z.object({
 
   // Node Environment
   NODE_ENV: z.enum(["development", "production", "test"]).default("development"),
+
+  // Auth (NextAuth.js)
+  AUTH_SECRET: z.string().min(1, "AUTH_SECRET is required").optional(),
+  AUTH_GOOGLE_ID: z.string().optional(),
+  AUTH_GOOGLE_SECRET: z.string().optional(),
 });
 
 // Validate environment variables
