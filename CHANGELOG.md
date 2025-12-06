@@ -9,6 +9,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- 5-step story submission wizard at `/submit` route
+  - Step 1 (Basics): Category and AI tool selection dropdowns
+  - Step 2 (Story): Rich text editors for title, problem, AI help, and outcome with success metrics
+  - Step 3 (Chat Link): URL input for chat links or textarea for excerpts
+  - Step 4 (Media): File dropzone for images/documents (up to 5 files, 10MB each)
+  - Step 5 (Review): Summary display with terms/privacy checkboxes
+  - WizardProgress component showing step completion status
+  - WizardTips sidebar with context-sensitive tips for each step
+  - Auto-save to localStorage with debounced saves (2s delay)
+  - Form validation using Zod schemas with step-by-step validation
+  - Theme variants (Memphis, Japanese, Organic) for all wizard components
+- Success page at `/submit/success` with themed confirmation message
+- Error page at `/submit/error` with error type handling (validation, network, server, unknown)
+- RichTextEditor component using Tiptap with bold, italic, bullet list, numbered list, and blockquote support
+- FileDropzone component with drag-and-drop, file preview, and removal functionality
+- Custom themed checkboxes with SVG checkmarks matching each theme
+- useWizardForm hook managing multi-step form state, navigation, and validation
+- useAutoSave hook with callback-based API for efficient auto-saving
+- Story submission Zod schemas with step-specific validation rules
+- 285 new unit tests for submit wizard components and pages
 - Authentication pages with NextAuth.js v5 integration
   - Sign-in page at `/auth/signin` with email/password and Google OAuth
   - Sign-up page at `/auth/signup` with registration form
@@ -72,6 +92,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Improved form performance: Changed validation mode from onChange to onBlur, optimized auto-save with subscription-based API
+- Updated jscpd config to ignore submit theme variants and report folder
 - StoryArtifacts components: Converted artifact cards to clickable buttons with hover states
 - ArtifactModal refactoring: Extracted sub-components (ModalHeader, ImageContent, DocumentContent, ModalFooter) reducing main function from ~140 to ~45 lines
 - Updated all work item specs to include Theme System Integration section

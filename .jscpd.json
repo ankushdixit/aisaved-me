@@ -7,6 +7,7 @@
     "coverage/**",
     "dist/**",
     "build/**",
+    "report/**",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
@@ -22,7 +23,10 @@
     "components/stories/organic/**",
     "components/auth/memphis/**",
     "components/auth/japanese/**",
-    "components/auth/organic/**"
+    "components/auth/organic/**",
+    "components/submit/memphis/**",
+    "components/submit/japanese/**",
+    "components/submit/organic/**"
   ],
   "format": ["typescript", "javascript", "tsx", "jsx"],
   "minLines": 5,
