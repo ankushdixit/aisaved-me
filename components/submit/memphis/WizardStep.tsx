@@ -12,12 +12,7 @@ interface WizardStepProps {
 
 export function WizardStep({ title, description, children, className }: WizardStepProps) {
   return (
-    <div
-      className={cn(
-        "bg-white border-3 border-black rounded-lg shadow-memphis-lg p-6 sm:p-8",
-        className
-      )}
-    >
+    <div className={cn("bg-white border-3 border-black shadow-memphis-lg p-6 sm:p-8", className)}>
       <div className="mb-6">
         <h2 className="text-2xl sm:text-3xl font-display font-bold text-black">{title}</h2>
         {description && <p className="mt-2 text-gray-600 font-body">{description}</p>}
@@ -50,12 +45,7 @@ export function WizardNavigation({
         <button
           type="button"
           onClick={onBack}
-          className={cn(
-            "px-6 py-3 font-display font-bold uppercase tracking-wide",
-            "bg-white border-3 border-black rounded-lg",
-            "shadow-memphis-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1",
-            "transition-all"
-          )}
+          className="btn-memphis px-6 py-3 bg-white text-black"
         >
           ← Back
         </button>
@@ -68,11 +58,8 @@ export function WizardNavigation({
         onClick={onNext}
         disabled={isSubmitting}
         className={cn(
-          "px-8 py-3 font-display font-bold uppercase tracking-wide text-white",
-          "border-3 border-black rounded-lg",
-          "shadow-memphis-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1",
-          "transition-all",
-          isLastStep ? "bg-mint-green text-black" : "bg-electric-blue",
+          "btn-memphis px-8 py-3",
+          isLastStep ? "bg-mint-green text-black" : "bg-electric-blue text-white",
           isSubmitting && "opacity-50 cursor-not-allowed"
         )}
       >

@@ -62,7 +62,7 @@ export function SignUpForm({ callbackUrl = "/" }: SignUpFormProps) {
   if (success) {
     return (
       <div className="w-full max-w-md text-center">
-        <div className="mb-6 rounded-lg border-3 border-black bg-[#00FF7F] px-6 py-8 shadow-memphis-md">
+        <div className="mb-6 border-3 border-black bg-[#00FF7F] px-6 py-8 shadow-memphis-md">
           <h2 className="text-2xl font-display font-bold text-black">Account Created!</h2>
           <p className="mt-2 text-gray-700">
             Check your email to verify your account, then sign in.
@@ -70,7 +70,7 @@ export function SignUpForm({ callbackUrl = "/" }: SignUpFormProps) {
         </div>
         <Link
           href="/auth/signin"
-          className="inline-block rounded-lg border-3 border-black bg-[#0066FF] px-8 py-3 font-display font-bold text-white shadow-memphis-md transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_#000000]"
+          className="btn-memphis inline-block px-8 py-3 bg-[#0066FF] text-white"
         >
           Go to Sign In
         </Link>
@@ -88,7 +88,7 @@ export function SignUpForm({ callbackUrl = "/" }: SignUpFormProps) {
 
       {/* Error message */}
       {formError && (
-        <div className="mb-6 rounded-lg border-3 border-black bg-[#FF1493] px-4 py-3 text-white shadow-memphis-sm">
+        <div className="mb-6 border-3 border-black bg-[#FF1493] px-4 py-3 text-white shadow-memphis-sm">
           {formError}
         </div>
       )}
@@ -117,7 +117,7 @@ export function SignUpForm({ callbackUrl = "/" }: SignUpFormProps) {
             onChange={(e) => setName(e.target.value)}
             placeholder="Your name"
             required
-            className="w-full rounded-lg border-3 border-black bg-white px-4 py-3 text-black placeholder-gray-400 shadow-memphis-sm transition-shadow focus:shadow-memphis-md focus:outline-none"
+            className="w-full border-3 border-black bg-white px-4 py-3 text-black placeholder-gray-400 shadow-memphis-sm transition-shadow focus:shadow-memphis-md focus:outline-none"
           />
         </div>
 
@@ -133,7 +133,7 @@ export function SignUpForm({ callbackUrl = "/" }: SignUpFormProps) {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@example.com"
             required
-            className="w-full rounded-lg border-3 border-black bg-white px-4 py-3 text-black placeholder-gray-400 shadow-memphis-sm transition-shadow focus:shadow-memphis-md focus:outline-none"
+            className="w-full border-3 border-black bg-white px-4 py-3 text-black placeholder-gray-400 shadow-memphis-sm transition-shadow focus:shadow-memphis-md focus:outline-none"
           />
         </div>
 
@@ -151,7 +151,7 @@ export function SignUpForm({ callbackUrl = "/" }: SignUpFormProps) {
               placeholder="••••••••"
               required
               minLength={8}
-              className="w-full rounded-lg border-3 border-black bg-white px-4 py-3 pr-16 text-black placeholder-gray-400 shadow-memphis-sm transition-shadow focus:shadow-memphis-md focus:outline-none"
+              className="w-full border-3 border-black bg-white px-4 py-3 pr-16 text-black placeholder-gray-400 shadow-memphis-sm transition-shadow focus:shadow-memphis-md focus:outline-none"
             />
             <button
               type="button"
@@ -176,7 +176,7 @@ export function SignUpForm({ callbackUrl = "/" }: SignUpFormProps) {
             onChange={(e) => setConfirmPassword(e.target.value)}
             placeholder="••••••••"
             required
-            className="w-full rounded-lg border-3 border-black bg-white px-4 py-3 text-black placeholder-gray-400 shadow-memphis-sm transition-shadow focus:shadow-memphis-md focus:outline-none"
+            className="w-full border-3 border-black bg-white px-4 py-3 text-black placeholder-gray-400 shadow-memphis-sm transition-shadow focus:shadow-memphis-md focus:outline-none"
           />
         </div>
 
@@ -184,7 +184,7 @@ export function SignUpForm({ callbackUrl = "/" }: SignUpFormProps) {
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full rounded-lg border-3 border-black bg-[#0066FF] px-6 py-4 font-display font-bold text-white shadow-memphis-md transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_#000000] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none disabled:cursor-not-allowed disabled:opacity-50"
+          className="btn-memphis w-full px-6 py-4 bg-[#0066FF] text-white disabled:cursor-not-allowed disabled:opacity-50"
         >
           {isLoading ? "Creating account..." : "Create Account"}
         </button>

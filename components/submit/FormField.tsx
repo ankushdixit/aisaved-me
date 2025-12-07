@@ -76,7 +76,7 @@ export function TextInput({
   const inputStyles = {
     memphis: cn(
       "w-full px-4 py-3 font-body text-base",
-      "border-2 rounded-lg bg-white",
+      "border-2 bg-white",
       "focus:outline-none focus:ring-2 focus:ring-electric-blue",
       error ? "border-coral" : "border-black"
     ),
@@ -141,7 +141,7 @@ export function TextArea({
   const textareaStyles = {
     memphis: cn(
       "w-full px-4 py-3 font-body text-base resize-none",
-      "border-2 rounded-lg bg-white",
+      "border-2 bg-white",
       "focus:outline-none focus:ring-2 focus:ring-electric-blue",
       error ? "border-coral" : "border-black"
     ),
@@ -193,7 +193,7 @@ export function SelectInput({
   const selectStyles = {
     memphis: cn(
       "w-full px-4 py-3 font-body text-base appearance-none cursor-pointer",
-      "border-2 rounded-lg bg-white",
+      "border-2 bg-white",
       "focus:outline-none focus:ring-2 focus:ring-electric-blue",
       error ? "border-coral" : "border-black"
     ),
@@ -257,7 +257,7 @@ export function Checkbox({ checked, onChange, label, error, className }: Checkbo
 
   const containerStyles = {
     memphis: cn(
-      "relative w-5 h-5 flex-shrink-0 rounded border-2 cursor-pointer transition-colors",
+      "relative w-5 h-5 flex-shrink-0 border-2 cursor-pointer transition-colors",
       "focus-within:ring-2 focus-within:ring-electric-blue focus-within:ring-offset-1",
       checked ? "bg-electric-blue border-black" : "bg-white border-black",
       error && "border-coral"

@@ -152,9 +152,8 @@ describe("SubmitSuccessPage", () => {
 
       const browseButton = screen.getByText("Browse Stories").closest("a") as HTMLElement;
       expect(browseButton).toHaveClass("bg-electric-blue");
-      expect(browseButton).toHaveClass("border-3");
-      expect(browseButton).toHaveClass("border-black");
-      expect(browseButton).toHaveClass("shadow-memphis-sm");
+      // btn-memphis class includes border and shadow styling via CSS
+      expect(browseButton).toHaveClass("btn-memphis");
     });
 
     it("applies Memphis theme to secondary button", () => {
@@ -162,8 +161,8 @@ describe("SubmitSuccessPage", () => {
 
       const homeButton = screen.getByText("Back to Home").closest("a") as HTMLElement;
       expect(homeButton).toHaveClass("text-black");
-      expect(homeButton).toHaveClass("border-3");
-      expect(homeButton).toHaveClass("border-black");
+      // btn-memphis class includes border and shadow styling via CSS
+      expect(homeButton).toHaveClass("btn-memphis");
     });
   });
 

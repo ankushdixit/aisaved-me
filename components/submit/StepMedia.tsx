@@ -26,7 +26,7 @@ export function StepMedia({ form, onNext, onBack }: StepMediaProps) {
   const files = watch("files") || [];
 
   const tipBoxStyles = {
-    memphis: "p-4 bg-yellow-50 border-2 border-bright-yellow rounded-lg",
+    memphis: "p-4 bg-yellow-50 border-2 border-bright-yellow",
     japanese: "p-4 bg-light-100 border border-light-300 rounded-lg",
     organic: "p-4 bg-cream-dark border border-coral-organic rounded-xl",
   };
@@ -65,9 +65,9 @@ export function StepMedia({ form, onNext, onBack }: StepMediaProps) {
 
         <div
           className={cn(
-            "p-4 rounded-lg text-sm",
+            "p-4 text-sm",
             theme === "memphis" && "bg-green-50 border-2 border-mint-green",
-            theme === "japanese" && "bg-light-100 border border-light-300",
+            theme === "japanese" && "bg-light-100 border border-light-300 rounded-lg",
             theme === "organic" && "bg-sage-light/20 border border-sage-light rounded-xl"
           )}
         >

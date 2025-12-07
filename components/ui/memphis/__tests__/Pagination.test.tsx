@@ -85,16 +85,18 @@ describe("Memphis Theme Pagination Component", () => {
   });
 
   describe("Memphis Theme Styling", () => {
-    it("applies Memphis border styling to buttons", () => {
+    it("applies btn-memphis-sm class which includes border styling", () => {
       render(<Pagination {...defaultProps} />);
       const prevButton = screen.getByLabelText("Previous page");
-      expect(prevButton).toHaveClass("border-3", "border-black");
+      // btn-memphis-sm CSS class includes border: 2px solid #000 and box-shadow
+      expect(prevButton).toHaveClass("btn-memphis-sm");
     });
 
-    it("applies Memphis shadow to buttons", () => {
+    it("applies btn-memphis-sm class which includes shadow styling", () => {
       render(<Pagination {...defaultProps} />);
       const prevButton = screen.getByLabelText("Previous page");
-      expect(prevButton).toHaveClass("shadow-memphis-sm");
+      // btn-memphis-sm CSS class includes box-shadow: 4px 4px 0px #000
+      expect(prevButton).toHaveClass("btn-memphis-sm");
     });
 
     it("current page has Memphis blue background", () => {
@@ -109,16 +111,18 @@ describe("Memphis Theme Pagination Component", () => {
       expect(inactivePageButton).toHaveClass("bg-white", "text-black");
     });
 
-    it("applies Memphis yellow hover color to buttons", () => {
+    it("applies btn-memphis-sm class with consistent styling", () => {
       render(<Pagination {...defaultProps} />);
       const pageButton = screen.getByLabelText("Page 2");
-      expect(pageButton).toHaveClass("hover:bg-[#FFD700]");
+      // btn-memphis-sm provides font-display, font-bold, and hover effects via CSS
+      expect(pageButton).toHaveClass("btn-memphis-sm");
     });
 
-    it("applies font-display to buttons", () => {
+    it("applies btn-memphis-sm to navigation buttons", () => {
       render(<Pagination {...defaultProps} />);
       const prevButton = screen.getByLabelText("Previous page");
-      expect(prevButton).toHaveClass("font-display", "font-bold");
+      // btn-memphis-sm includes font-display and font-bold in CSS
+      expect(prevButton).toHaveClass("btn-memphis-sm");
     });
   });
 
@@ -253,16 +257,17 @@ describe("Memphis Theme Pagination Component", () => {
   });
 
   describe("Interactive Behavior", () => {
-    it("applies transition classes for smooth animations", () => {
+    it("applies btn-memphis-sm class which includes smooth transitions", () => {
       render(<Pagination {...defaultProps} />);
       const prevButton = screen.getByLabelText("Previous page");
-      expect(prevButton).toHaveClass("transition-all");
+      // btn-memphis-sm class includes transition: all 0.15s ease in CSS
+      expect(prevButton).toHaveClass("btn-memphis-sm");
     });
 
-    it("applies hover shadow effect", () => {
+    it("applies btn-memphis-sm class for consistent button styling", () => {
       render(<Pagination {...defaultProps} />);
       const prevButton = screen.getByLabelText("Previous page");
-      expect(prevButton).toHaveClass("hover:shadow-memphis-md");
+      expect(prevButton).toHaveClass("btn-memphis-sm");
     });
 
     it("multiple clicks trigger multiple onPageChange calls", () => {

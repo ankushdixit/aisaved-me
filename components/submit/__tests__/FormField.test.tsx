@@ -355,7 +355,8 @@ describe("TextInput", () => {
 
       const input = screen.getByRole("textbox");
       expect(input).toHaveClass("border-2");
-      expect(input).toHaveClass("rounded-lg");
+      // Memphis theme uses sharp corners (no rounded-lg)
+      expect(input).not.toHaveClass("rounded-lg");
       expect(input).toHaveClass("focus:ring-electric-blue");
     });
   });
@@ -476,7 +477,8 @@ describe("TextArea", () => {
 
       const textarea = screen.getByRole("textbox");
       expect(textarea).toHaveClass("border-2");
-      expect(textarea).toHaveClass("rounded-lg");
+      // Memphis theme uses sharp corners (no rounded-lg)
+      expect(textarea).not.toHaveClass("rounded-lg");
       expect(textarea).toHaveClass("focus:ring-electric-blue");
       expect(textarea).toHaveClass("resize-none");
     });
@@ -600,7 +602,8 @@ describe("SelectInput", () => {
 
       const select = screen.getByRole("combobox");
       expect(select).toHaveClass("border-2");
-      expect(select).toHaveClass("rounded-lg");
+      // Memphis theme uses sharp corners (no rounded-lg)
+      expect(select).not.toHaveClass("rounded-lg");
       expect(select).toHaveClass("focus:ring-electric-blue");
     });
   });

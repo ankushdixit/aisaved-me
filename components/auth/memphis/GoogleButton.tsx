@@ -15,7 +15,7 @@ export function GoogleButton({ callbackUrl = "/" }: GoogleButtonProps) {
     <button
       type="button"
       onClick={handleClick}
-      className="flex w-full items-center justify-center gap-3 rounded-lg border-3 border-black bg-white px-6 py-4 font-display font-bold text-black shadow-memphis-md transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_#000000] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none"
+      className="flex w-full items-center justify-center gap-3 border-3 border-black bg-white px-6 py-4 font-display font-bold text-black shadow-memphis-md transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_#000000] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none"
     >
       {/* Google Logo */}
       <svg className="h-5 w-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

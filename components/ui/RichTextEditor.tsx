@@ -28,7 +28,7 @@ function ToolbarButton({
 }) {
   const { theme } = useTheme();
 
-  const baseStyles = "px-2 py-1 text-sm font-medium rounded transition-colors";
+  const baseStyles = "px-2 py-1 text-sm font-medium transition-colors";
 
   const themeStyles = {
     memphis: cn(
@@ -124,7 +124,7 @@ export function RichTextEditor({
 
   const containerStyles = {
     memphis: cn(
-      "border-2 rounded-lg overflow-hidden",
+      "border-2 overflow-hidden",
       error ? "border-coral" : "border-black",
       "focus-within:ring-2 focus-within:ring-electric-blue"
     ),

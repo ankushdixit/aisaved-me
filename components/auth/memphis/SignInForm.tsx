@@ -51,7 +51,7 @@ export function SignInForm({ callbackUrl = "/", error }: SignInFormProps) {
       </div>
 
       {formError && (
-        <div className="mb-6 rounded-lg border-3 border-black bg-[#FF1493] px-4 py-3 text-white shadow-memphis-sm">
+        <div className="mb-6 border-3 border-black bg-[#FF1493] px-4 py-3 text-white shadow-memphis-sm">
           {formError}
         </div>
       )}
@@ -89,7 +89,7 @@ export function SignInForm({ callbackUrl = "/", error }: SignInFormProps) {
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full rounded-lg border-3 border-black bg-[#0066FF] px-6 py-4 font-display font-bold text-white shadow-memphis-md transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_#000000] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none disabled:cursor-not-allowed disabled:opacity-50"
+          className="btn-memphis w-full px-6 py-4 bg-[#0066FF] text-white disabled:cursor-not-allowed disabled:opacity-50"
         >
           {isLoading ? "Signing in..." : "Sign In"}
         </button>

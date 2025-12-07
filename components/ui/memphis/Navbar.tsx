@@ -49,14 +49,14 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         <div className="flex flex-col gap-3 pt-4 border-t-3 border-black">
           <Link
             href="/auth/signin"
-            className="px-6 py-3 text-base font-display text-center text-black bg-[#FFD700] border-3 border-black shadow-memphis-sm transform -rotate-1 hover:rotate-0 transition-transform"
+            className="btn-memphis px-6 py-3 text-base text-center bg-[#FFD700] text-black"
             onClick={onClose}
           >
             Sign In
           </Link>
           <Link
             href="/submit"
-            className="px-6 py-3 text-base font-display text-center text-white bg-[#FF1493] border-3 border-black shadow-memphis-sm transform rotate-1 hover:rotate-0 transition-transform"
+            className="btn-memphis px-6 py-3 text-base text-center bg-[#FF1493] text-white"
             onClick={onClose}
           >
             Share a Win
@@ -100,13 +100,13 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="/auth/signin"
-              className="px-6 py-2.5 text-sm font-display text-black bg-[#FFD700] border-3 border-black shadow-memphis-sm transform -rotate-1 hover:rotate-0 hover:shadow-memphis-md transition-all uppercase"
+              className="btn-memphis px-6 py-2.5 text-sm bg-[#FFD700] text-black"
             >
               Sign In
             </Link>
             <Link
               href="/submit"
-              className="px-6 py-2.5 text-sm font-display text-white bg-[#FF1493] border-3 border-black shadow-memphis-sm transform rotate-1 hover:rotate-0 hover:shadow-memphis-md transition-all uppercase"
+              className="btn-memphis px-6 py-2.5 text-sm bg-[#FF1493] text-white"
             >
               Share a Win
             </Link>
@@ -114,7 +114,7 @@ export function Navbar() {
 
           <button
             type="button"
-            className="md:hidden p-2 text-black bg-[#00FF7F] border-3 border-black rounded-lg shadow-memphis-sm hover:shadow-memphis-md transition-all"
+            className="btn-memphis-sm md:hidden p-2 bg-[#00FF7F] text-black"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label="Toggle menu"

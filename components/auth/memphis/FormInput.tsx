@@ -16,7 +16,7 @@ export function FormInput({ label, id, error, ...props }: FormInputProps) {
       <input
         id={id}
         {...props}
-        className="w-full rounded-lg border-3 border-black bg-white px-4 py-3 text-black placeholder-gray-400 shadow-memphis-sm transition-shadow focus:shadow-memphis-md focus:outline-none"
+        className="w-full border-3 border-black bg-white px-4 py-3 text-black placeholder-gray-400 shadow-memphis-sm transition-shadow focus:shadow-memphis-md focus:outline-none"
       />
       {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
     </div>
@@ -48,7 +48,7 @@ export function PasswordInput({
           id={id}
           type={showPassword ? "text" : "password"}
           {...props}
-          className="w-full rounded-lg border-3 border-black bg-white px-4 py-3 pr-16 text-black placeholder-gray-400 shadow-memphis-sm transition-shadow focus:shadow-memphis-md focus:outline-none"
+          className="w-full border-3 border-black bg-white px-4 py-3 pr-16 text-black placeholder-gray-400 shadow-memphis-sm transition-shadow focus:shadow-memphis-md focus:outline-none"
         />
         <button
           type="button"

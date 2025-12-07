@@ -8,7 +8,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
 
   return (
     <div
-      className={`bg-white border-4 border-black shadow-memphis-md p-6 hover:shadow-memphis-lg transition-all ${rotation} hover:rotate-0`}
+      className={`bg-white border-4 border-black shadow-memphis-md p-6 hover:shadow-memphis-lg transition-all ${rotation}`}
       style={{ backgroundColor: bgColor }}
     >
       {/* Quote Mark */}

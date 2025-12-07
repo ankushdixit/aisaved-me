@@ -9,6 +9,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Admin Dashboard UI at `/admin` route
+  - Dashboard page with stats cards, pending stories table, activity feed, and weekly stats
+  - Stories management page at `/admin/stories` with full story listing
+  - Users management page at `/admin/users` with user table
+  - AdminSidebar navigation component with badge indicators
+  - StatsCard component with icon, value, and trend display
+  - PendingStoriesTable with view, approve, reject actions
+  - StoryPreviewModal for reviewing story submissions
+  - ActivityFeed component showing recent activity
+  - WeeklyStats component with bar chart visualization
+  - Theme variants (Memphis, Japanese, Organic) for all admin components
+  - Mock data for admin statistics and pending stories
+  - Route protection middleware for admin pages
 - 5-step story submission wizard at `/submit` route
   - Step 1 (Basics): Category and AI tool selection dropdowns
   - Step 2 (Story): Rich text editors for title, problem, AI help, and outcome with success metrics

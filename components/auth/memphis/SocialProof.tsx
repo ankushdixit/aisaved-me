@@ -47,7 +47,7 @@ export function SocialProof({ variant: _variant = "signin" }: SocialProofProps) 
       </div>
 
       {/* Testimonial */}
-      <div className="mt-12 lg:mt-0 rounded-xl bg-[#1e3a8a] p-6">
+      <div className="mt-12 lg:mt-0 bg-[#1e3a8a] p-6">
         <p className="text-base italic text-blue-200">
           &quot;Claude helped me save $3,200 against Enterprise&apos;s wrongful damage claim. This
           platform helped me share my strategy so others can do the same.&quot;

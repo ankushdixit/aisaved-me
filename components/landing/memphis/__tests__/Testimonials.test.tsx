@@ -111,10 +111,14 @@ describe("Testimonials Component (Memphis)", () => {
     expect(cards.length).toBeGreaterThanOrEqual(3);
   });
 
-  it("has hover effect to remove rotation", () => {
+  it("has shadow-only hover effect (non-clickable cards use subtle engagement)", () => {
     const { container } = render(<Testimonials />);
-    const cards = container.querySelectorAll(".hover\\:rotate-0");
-    expect(cards.length).toBeGreaterThanOrEqual(3);
+    // Non-clickable cards have shadow increase only, not rotation
+    const cardsWithShadowHover = container.querySelectorAll(".hover\\:shadow-memphis-lg");
+    expect(cardsWithShadowHover.length).toBeGreaterThanOrEqual(3);
+    // Verify rotation is NOT changed on hover (removed for consistency)
+    const cardsWithRotationHover = container.querySelectorAll(".hover\\:rotate-0");
+    expect(cardsWithRotationHover.length).toBe(0);
   });
 
   it("applies correct grid layout", () => {

@@ -76,7 +76,7 @@ export function FileDropzone({
 
   const dropzoneStyles = {
     memphis: cn(
-      "border-3 border-dashed rounded-lg p-8 text-center transition-all cursor-pointer",
+      "border-3 border-dashed p-8 text-center transition-all cursor-pointer",
       isDragActive
         ? "border-electric-blue bg-blue-50"
         : "border-black hover:border-electric-blue hover:bg-blue-50"
@@ -102,7 +102,7 @@ export function FileDropzone({
   };
 
   const fileItemStyles = {
-    memphis: "flex items-center justify-between p-3 bg-white border-2 border-black rounded-lg",
+    memphis: "flex items-center justify-between p-3 bg-white border-2 border-black",
     japanese:
       "flex items-center justify-between p-3 bg-rice-paper border border-light-300 rounded-lg",
     organic: "flex items-center justify-between p-3 bg-cream border border-sage-light rounded-xl",
@@ -149,13 +149,9 @@ export function FileDropzone({
             <div key={file.id} className={fileItemStyles[theme]}>
               <div className="flex items-center gap-3">
                 {file.preview ? (
-                  <img
-                    src={file.preview}
-                    alt={file.name}
-                    className="w-10 h-10 object-cover rounded"
-                  />
+                  <img src={file.preview} alt={file.name} className="w-10 h-10 object-cover" />
                 ) : (
-                  <div className="w-10 h-10 bg-gray-200 rounded flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gray-200 flex items-center justify-center">
                     <svg
                       className="w-6 h-6 text-gray-500"
                       fill="none"

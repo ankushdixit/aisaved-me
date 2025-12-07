@@ -206,7 +206,8 @@ describe("Memphis Theme Navbar Component", () => {
     it("mobile menu button has Memphis green styling", () => {
       render(<Navbar />);
       const menuButton = screen.getByRole("button", { name: /toggle menu/i });
-      expect(menuButton).toHaveClass("bg-[#00FF7F]", "border-3", "border-black");
+      // btn-memphis-sm includes border styling via CSS class
+      expect(menuButton).toHaveClass("btn-memphis-sm", "bg-[#00FF7F]");
     });
 
     it("mobile menu has Memphis yellow background", () => {
