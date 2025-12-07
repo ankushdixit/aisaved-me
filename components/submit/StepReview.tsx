@@ -25,7 +25,7 @@ function ReviewSection({ title, children }: { title: string; children: React.Rea
   };
 
   const contentStyles = {
-    memphis: "p-4 bg-gray-50 border-2 border-gray-200 rounded-lg",
+    memphis: "p-4 bg-gray-50 border-2 border-gray-200",
     japanese: "p-4 bg-light-100 border border-light-300 rounded-md",
     organic: "p-4 bg-cream-dark border border-sage-light rounded-xl",
   };
@@ -50,7 +50,7 @@ export function StepReview({ form, onBack, onSubmit, isSubmitting }: StepReviewP
   const values = watch();
 
   const alertStyles = {
-    memphis: "p-4 bg-yellow-50 border-2 border-bright-yellow rounded-lg text-sm",
+    memphis: "p-4 bg-yellow-50 border-2 border-bright-yellow text-sm",
     japanese: "p-4 bg-light-100 border border-light-300 rounded-md text-sm",
     organic: "p-4 bg-coral-organic/20 border border-coral-organic rounded-xl text-sm",
   };

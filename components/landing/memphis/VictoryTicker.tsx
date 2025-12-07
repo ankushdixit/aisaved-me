@@ -63,7 +63,7 @@ function TickerCardContent({ story }: { story: TickerStory }) {
 
 function TickerCard({ story }: { story: TickerStory }) {
   const cardClasses =
-    "flex-shrink-0 w-[320px] bg-white border-3 border-black shadow-memphis-md p-4 hover:shadow-memphis-lg transition-all cursor-pointer group transform hover:-rotate-1";
+    "flex-shrink-0 w-[320px] bg-white border-3 border-black shadow-memphis-md p-4 hover:shadow-memphis-lg transition-all cursor-pointer group transform -rotate-1 hover:rotate-0";
 
   if (story.slug) {
     return (

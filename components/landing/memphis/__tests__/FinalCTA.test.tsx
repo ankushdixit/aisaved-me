@@ -85,10 +85,11 @@ describe("FinalCTA Component (Memphis)", () => {
     expect(button?.className).toContain("border-white");
   });
 
-  it("applies Memphis shadow to CTA button", () => {
+  it("applies white Memphis shadow to CTA button (on black background)", () => {
     render(<FinalCTA />);
     const button = screen.getByText("Share Your Story").closest("a");
-    expect(button?.className).toContain("shadow-memphis-lg");
+    // Uses explicit white shadow for visibility on black background
+    expect(button?.className).toContain("shadow-[8px_8px_0px_#ffffff]");
   });
 
   it("has rotation transform on CTA button", () => {
@@ -97,11 +98,13 @@ describe("FinalCTA Component (Memphis)", () => {
     expect(button?.className).toContain("-rotate-2");
   });
 
-  it("has hover effects on CTA button", () => {
+  it("has press-down hover effects on CTA button", () => {
     render(<FinalCTA />);
     const button = screen.getByText("Share Your Story").closest("a");
     expect(button?.className).toContain("hover:rotate-0");
-    expect(button?.className).toContain("hover:shadow-memphis-xl");
+    // Uses press-down pattern: translate + shadow reduction
+    expect(button?.className).toContain("hover:translate-x-[2px]");
+    expect(button?.className).toContain("hover:translate-y-[2px]");
   });
 
   it("displays text in white color", () => {

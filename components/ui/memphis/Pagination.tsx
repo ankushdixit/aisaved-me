@@ -53,10 +53,10 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="w-10 h-10 flex items-center justify-center bg-white border-3 border-black shadow-memphis-sm font-display font-bold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#FFD700] hover:shadow-memphis-md transition-all"
+        className="btn-memphis-sm w-10 h-10 flex items-center justify-center bg-white disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
         aria-label="Previous page"
       >
-        &larr;
+        ←
       </button>
 
       {/* Page Numbers */}
@@ -69,10 +69,8 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
           <button
             key={page}
             onClick={() => onPageChange(page)}
-            className={`w-10 h-10 flex items-center justify-center border-3 border-black font-display font-bold transition-all ${
-              currentPage === page
-                ? "bg-[#0066FF] text-white shadow-memphis-sm"
-                : "bg-white text-black hover:bg-[#FFD700] hover:shadow-memphis-sm"
+            className={`btn-memphis-sm w-10 h-10 flex items-center justify-center ${
+              currentPage === page ? "bg-[#0066FF] text-white" : "bg-white text-black"
             }`}
             aria-label={`Page ${page}`}
             aria-current={currentPage === page ? "page" : undefined}
@@ -86,10 +84,10 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="w-10 h-10 flex items-center justify-center bg-white border-3 border-black shadow-memphis-sm font-display font-bold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#FFD700] hover:shadow-memphis-md transition-all"
+        className="btn-memphis-sm w-10 h-10 flex items-center justify-center bg-white disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
         aria-label="Next page"
       >
-        &rarr;
+        →
       </button>
     </nav>
   );

@@ -207,7 +207,7 @@ function WizardTips({ currentStep }: { currentStep: number }) {
 
   const containerStyles = {
     memphis:
-      "fixed right-8 top-1/3 w-60 bg-white border-3 border-black rounded-lg shadow-memphis-lg p-5 hidden xl:block",
+      "fixed right-8 top-1/3 w-60 bg-white border-3 border-black shadow-memphis-lg p-5 hidden xl:block",
     japanese:
       "fixed right-8 top-1/3 w-56 bg-rice-paper border border-light-300 rounded-lg shadow-card p-5 hidden xl:block",
     organic:
@@ -228,7 +228,7 @@ function WizardTips({ currentStep }: { currentStep: number }) {
 
   const numberStyles = {
     memphis:
-      "flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-xs font-bold text-electric-blue",
+      "flex-shrink-0 w-6 h-6 bg-[#0066FF] border-2 border-black flex items-center justify-center text-xs font-bold text-white",
     japanese:
       "flex-shrink-0 w-5 h-5 bg-light-200 rounded-full flex items-center justify-center text-xs text-sumi-black",
     organic:

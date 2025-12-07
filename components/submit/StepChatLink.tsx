@@ -99,9 +99,9 @@ export function StepChatLink({ form, onNext, onBack }: StepChatLinkProps) {
 
       <div
         className={cn(
-          "p-4 rounded-lg text-sm",
+          "p-4 text-sm",
           theme === "memphis" && "bg-blue-50 border-2 border-electric-blue",
-          theme === "japanese" && "bg-light-100 border border-light-300",
+          theme === "japanese" && "bg-light-100 border border-light-300 rounded-lg",
           theme === "organic" && "bg-cream-dark border border-sage-light rounded-xl"
         )}
       >

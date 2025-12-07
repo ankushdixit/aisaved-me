@@ -269,7 +269,8 @@ describe("WizardNavigation", () => {
 
       const nextButton = screen.getByText(/Next Step/i);
       expect(nextButton).toHaveClass("bg-electric-blue");
-      expect(nextButton).toHaveClass("border-black");
+      // btn-memphis class includes border and shadow styling via CSS
+      expect(nextButton).toHaveClass("btn-memphis");
     });
   });
 

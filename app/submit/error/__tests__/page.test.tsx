@@ -269,9 +269,8 @@ describe("SubmitErrorPage", () => {
 
       const tryAgainButton = screen.getByText("Try Again").closest("a") as HTMLElement;
       expect(tryAgainButton).toHaveClass("bg-electric-blue");
-      expect(tryAgainButton).toHaveClass("border-3");
-      expect(tryAgainButton).toHaveClass("border-black");
-      expect(tryAgainButton).toHaveClass("shadow-memphis-sm");
+      // btn-memphis class includes border and shadow styling via CSS
+      expect(tryAgainButton).toHaveClass("btn-memphis");
     });
 
     it("applies Memphis theme to secondary button", () => {
@@ -279,8 +278,8 @@ describe("SubmitErrorPage", () => {
 
       const homeButton = screen.getByText("Back to Home").closest("a") as HTMLElement;
       expect(homeButton).toHaveClass("text-black");
-      expect(homeButton).toHaveClass("border-3");
-      expect(homeButton).toHaveClass("border-black");
+      // btn-memphis class includes border and shadow styling via CSS
+      expect(homeButton).toHaveClass("btn-memphis");
     });
   });
 

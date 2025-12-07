@@ -27,7 +27,7 @@ export function FinalCTA() {
 
         <Link
           href="/submit"
-          className="inline-block mt-10 px-12 py-5 text-lg font-display font-bold text-black bg-[#FFD700] border-4 border-white shadow-memphis-lg transform -rotate-2 hover:rotate-0 hover:shadow-memphis-xl transition-all uppercase"
+          className="inline-block mt-10 px-12 py-5 text-lg font-display font-bold text-black bg-[#FFD700] border-4 border-white shadow-[8px_8px_0px_#ffffff] transform -rotate-2 hover:rotate-0 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_#ffffff] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none transition-all uppercase tracking-wider"
         >
           Share Your Story
         </Link>

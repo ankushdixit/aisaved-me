@@ -46,7 +46,7 @@ function SubmitErrorContent() {
   };
 
   const containerStyles = {
-    memphis: "bg-white border-3 border-black rounded-lg shadow-memphis-lg p-8 md:p-12",
+    memphis: "bg-white border-3 border-black shadow-memphis-lg p-8 md:p-12",
     japanese: "bg-rice-paper border border-light-300 rounded-lg shadow-card p-8 md:p-12",
     organic: "bg-cream border-2 border-sage-light rounded-2xl shadow-soft p-8 md:p-12",
   };
@@ -78,7 +78,7 @@ function SubmitErrorContent() {
   };
 
   const infoBoxStyles = {
-    memphis: "bg-red-50 border-2 border-coral rounded-lg p-4 mb-8",
+    memphis: "bg-red-50 border-2 border-coral p-4 mb-8",
     japanese: "bg-light-200 border border-hanko-red/30 rounded-lg p-4 mb-8",
     organic: "bg-terracotta/10 border border-terracotta/30 rounded-xl p-4 mb-8",
   };
@@ -96,8 +96,7 @@ function SubmitErrorContent() {
   };
 
   const primaryButtonStyles = {
-    memphis:
-      "bg-electric-blue text-white font-display font-bold uppercase tracking-wide py-3 px-6 border-3 border-black rounded-lg shadow-memphis-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all",
+    memphis: "btn-memphis py-3 px-6 bg-electric-blue text-white",
     japanese:
       "bg-hanko-red text-white py-3 px-6 rounded-lg hover:bg-hanko-red/90 transition-colors",
     organic:
@@ -105,8 +104,7 @@ function SubmitErrorContent() {
   };
 
   const secondaryButtonStyles = {
-    memphis:
-      "bg-white text-black font-display font-bold uppercase tracking-wide py-3 px-6 border-3 border-black rounded-lg shadow-memphis-sm hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all",
+    memphis: "btn-memphis py-3 px-6 bg-white text-black",
     japanese:
       "text-sumi-black py-3 px-6 border border-light-300 rounded-lg hover:bg-light-100 transition-colors",
     organic:

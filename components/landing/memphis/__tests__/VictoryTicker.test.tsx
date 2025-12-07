@@ -122,10 +122,13 @@ describe("VictoryTicker Component (Memphis)", () => {
     expect(cards.length).toBeGreaterThan(0);
   });
 
-  it("has hover rotation on ticker cards", () => {
+  it("has hover rotation normalize on ticker cards (lift-up pattern)", () => {
     const { container } = render(<VictoryTicker />);
-    const cards = container.querySelectorAll(".hover\\:-rotate-1");
-    expect(cards.length).toBeGreaterThan(0);
+    // Clickable cards have base rotation and normalize on hover
+    const cardsWithBaseRotation = container.querySelectorAll(".-rotate-1");
+    expect(cardsWithBaseRotation.length).toBeGreaterThan(0);
+    const cardsWithHoverNormalize = container.querySelectorAll(".hover\\:rotate-0");
+    expect(cardsWithHoverNormalize.length).toBeGreaterThan(0);
   });
 
   it("renders two separate ticker rows", () => {

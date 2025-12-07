@@ -36,7 +36,7 @@ export function WizardProgress({
                 onClick={() => onStepClick?.(step.id)}
                 className={cn(
                   "relative flex items-center justify-center flex-shrink-0",
-                  "w-10 h-10 rounded-full font-display font-bold text-sm",
+                  "w-10 h-10 font-display font-bold text-sm",
                   "border-3 transition-all",
                   isComplete && "bg-mint-green border-black text-black",
                   isCurrent && "bg-electric-blue border-black text-white",
